@@ -21,7 +21,7 @@ const Cover = (props: any) => {
         }`}
       >
         <div
-          className={`w-[320px] aspect-square relative cursor-pointer`}
+          className={`w-[320px] aspect-square relative cursor-pointer transition hover:scale-125 hover:rotate-3`}
           onClick={() => {
             setShowCover(false);
             audioRef.current.play()
