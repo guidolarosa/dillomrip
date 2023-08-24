@@ -7,6 +7,7 @@ const Branches = (props: any) => {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
+    setScrollPosition(window.scrollY);
     const onScroll = () => {
       setScrollPosition(window.scrollY);
     };

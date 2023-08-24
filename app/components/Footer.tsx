@@ -32,7 +32,7 @@ const Footer = (props: any) => {
     };
   }, []);
   return (
-    <footer className="flex justify-center bg-[url('/fire-footer.png')] w-full h-[532px] pb-[78px] bg-cover bg-bottom overflow-hidden">
+    <footer className="flex justify-center bg-[url('/fire-footer.png')] w-full h-[532px] pb-[32px] bg-cover bg-bottom overflow-hidden">
       <div
         className="countdown font-['Editorial_New'] relative mt-auto"
         data-aos="fade-up"
