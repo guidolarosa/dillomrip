@@ -14,27 +14,25 @@ const config: Config = {
           "25%": { transform: "translate(-320px)" },
           "75%": { transform: "translate(320px)" },
         },
-        shake: {
-          "10%, 90%": {
-            transform: "translate3d(-1px, 0, 0)",
+        float: {
+          "0%, 50%, 100%": {
+            transform: "translateY(0px) scale(1.05)",
+            filter: "drop-shadow(0 0 20px white)",
           },
-
-          "20%, 80%": {
-            transform: "translate3d(2px, 0, 0)",
+          "25%": {
+            transform: "translateY(-10px) scale(1)",
+            filter: "drop-shadow(0 0 10px white)",
           },
-          "30%, 50%, 70%": {
-            transform: "translate3d(-4px, 0, 0)",
-          },
-
-          "40%, 60%": {
-            transform: "translate3d(4px, 0, 0)",
+          "75%": {
+            transform: "translateY(10px) scale(1)",
+            filter: "drop-shadow(0 0 10px white)",
           },
         },
       },
       animation: {
         fog: "fog 90s ease-in-out infinite",
         fog1: "fog 70s ease-in-out infinite",
-        shake: "shake 1s cubic-bezier(.36,.07,.19,.97) both"
+        float: "float 10s ease-in-out infinite",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

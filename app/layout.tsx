@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import "./globals.css";
 import "aos/dist/aos.css"
+import "animate.css"
 
 export const metadata: Metadata = {
   title: "Dillom.RIP",
@@ -25,7 +26,7 @@ export default function RootLayout({
           />
         </div>
         <header className="flex justify-center w-full py-[90px]">
-          <div className="w-[320px] h-[48px] md:w-[600px] md:h-[90px] relative">
+          <div className="w-[320px] h-[48px] md:w-[600px] md:h-[90px] relative animate-float">
             <Image src="/header.svg" fill alt="DillomRIP" />
           </div>
         </header>

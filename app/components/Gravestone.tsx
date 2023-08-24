@@ -1,5 +1,6 @@
 import Image from "next/image";
 import RIPOffer from "./RIPOffer";
+import { useEffect, useState, useRef } from "react";
 
 const ripOffers = [
   {
@@ -35,14 +36,36 @@ const ripOffers = [
 ];
 
 const Gravestone = (props: any) => {
+  const [gravestoneAnimated, setGravestoneAnimated] = useState(true);
+  const [timer, setTimer] = useState(0)
+  
+  useEffect(() => {
+    const animationInterval = setInterval(() => {
+      setTimer(prevTimer => prevTimer + 1)
+    }, 2000);
+    return () => {
+      clearInterval(animationInterval);
+    };
+  }, []);
+  
+
+  useEffect(() => {
+    setGravestoneAnimated(!gravestoneAnimated)
+  }, [timer]);
+
+
   return (
     <div className="gravestone-container">
-      <div className="gravestone w-[235px] h-[307px] md:w-[456px] md:h-[590px] relative animation-shake">
+      <div className="gravestone w-[235px] h-[307px] md:w-[456px] md:h-[590px] relative">
         <Image
           fill
           src="/gravestone.png"
           alt="Grave"
-          className="object-contain"
+          className={`${
+            gravestoneAnimated
+              ? "object-contain animate__animated animate__shakeX"
+              : ""
+          }`}
         />
         <div className="candles w-[128px] aspect-square absolute bottom-[12px] left-[-106px]">
           <Image

@@ -31,7 +31,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex min-h-screen flex-col items-center relative z-10 xl:h-[2653px]">
+    <main className="flex min-h-screen flex-col items-center relative z-10">
       <Cover />
       <Fog />
       <Branches />
