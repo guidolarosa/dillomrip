@@ -20,7 +20,7 @@ export default function RootLayout({
         <link rel="icon" href="/offers/ofrenda-1.png" sizes="any" />
       </head>
       <body className={`relative`}>
-        <div className="absolute w-[100vw] h-full z-0 bg-[url(/bkg.jpg)] bg-top bg-[100%_auto]" />
+        <div className="absolute w-[100vw] h-full z-0 bg-[url(/bkg.jpg)] bg-[center_top_-20rem] lg:bg-top" />
         <header className="flex justify-center w-full py-[90px] rellax">
           <div className="w-[320px] h-[48px] md:w-[600px] md:h-[90px] relative animate-float">
             <Image src="/header.svg" fill alt="DillomRIP" />
