@@ -16,6 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/offers/ofrenda-1.png" sizes="any" />
+      </head>
       <body className={`relative`}>
         <div className="absolute w-[100vw] h-full z-0">
           <Image

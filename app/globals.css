@@ -45,3 +45,27 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+  z-index: 10;
+  position: relative;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: theme('colors.black'); 
+  border-radius: 0px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: theme('colors.gray.500'); 
+  border-radius: 0px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.gray.200')
+}
