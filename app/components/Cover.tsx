@@ -35,18 +35,13 @@ const Cover = (props: any) => {
           <Image src="/header.svg" fill alt="DillomRIP" />
         </div> */}
       </div>
-      {showCover && (
-        <div className="opening fixed w-[100vw] h-[100dvh] z-10">
+      {!showCover && (
+        <div className="opening fixed w-[100vw] h-[100dvh] z-30">
           <Image
             src="/opening.gif"
             fill
             alt="Opening"
             className="object-cover"
-            onLoadingComplete={() => {
-              // setTimeout(() => {
-              //   setShowCover(false);
-              // }, 500);
-            }}
           />
         </div>
       )}
