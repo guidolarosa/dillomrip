@@ -61,9 +61,9 @@ const Gravestone = (props: any) => {
           fill
           src="/gravestone.png"
           alt="Grave"
-          className={`${
+          className={`object-contain ${
             gravestoneAnimated
-              ? "object-contain animate__animated animate__shakeX"
+              ? " animate__animated animate__shakeX"
               : ""
           }`}
         />

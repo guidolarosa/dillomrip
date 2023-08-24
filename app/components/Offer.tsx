@@ -10,7 +10,7 @@ const Offer = (props: any) => {
     >
       <div className={`absolute w-[72px] h-[72px] flex justify-center`}>
         <Image src={props.image} fill alt={props.text} className="object-contain"/>
-        <div className="whitespace-nowrap text-center text-[18px] text-gray-500 absolute bottom-[-32px]">
+        <div className="whitespace-nowrap text-center text-[18px] text-gray-400 absolute bottom-[-32px]">
             {props.text}
         </div>
       </div>
