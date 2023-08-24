@@ -27,12 +27,29 @@ const config: Config = {
             transform: "translateY(10px) scale(1)",
             filter: "drop-shadow(0 0 10px white)",
           },
+          
         },
+        fadeup: {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(32px)"
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)"
+          }
+        },
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        }
       },
       animation: {
         fog: "fog 90s ease-in-out infinite",
         fog1: "fog 70s ease-in-out infinite",
         float: "float 10s ease-in-out infinite",
+        fadeup: "fadeup 0.25s ease-out forwards",
+        wiggle: 'wiggle 1s ease-in-out infinite',
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

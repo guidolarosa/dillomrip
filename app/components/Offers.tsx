@@ -1,12 +1,10 @@
 import { getOffers } from "@/utils/sanity";
 import { useState, useEffect } from "react";
 import Offer from "./Offer";
+import { getRandomArbitrary } from "@/utils/utils";
 
 const Offers = (props: any) => {
   const [offers, setOffers] = useState([]);
-  const getRandomArbitrary = (min: any, max: any) => {
-    return Math.random() * (max - min) + min;
-  };
 
   useEffect(() => {
     getOffers().then((data) => {
