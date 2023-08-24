@@ -64,7 +64,7 @@ export default function Home() {
           />
         ))}
       </div>
-      <div className="flex flex-col items-center mb-[825px]">
+      <div className="flex flex-col items-center mb-[98px]">
         <p
           className="text-[24px] lg:text-[36px] text-center mb-[80px] h-[224px]"
           ref={typeRef}
