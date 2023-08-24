@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
 import AOS from "aos";
 import { TypeAnimation } from "react-type-animation";
+import Rellax from 'rellax';
 import Cover from "./components/Cover";
 import Fog from "./components/Fog";
 import Offers from "./components/Offers";
@@ -19,6 +20,12 @@ export default function Home() {
     AOS.init({
       offset: 280,
       once: true,
+    });
+
+    const rellax = new Rellax('.rellax', {
+      speed: 10,
+      center: false,
+      vertical: true,
     });
 
     if (typeRef.current != null) {
