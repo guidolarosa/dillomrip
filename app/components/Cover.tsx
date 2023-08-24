@@ -36,7 +36,7 @@ const Cover = (props: any) => {
         </div> */}
       </div>
       {!showCover && (
-        <div className="opening fixed w-[100vw] h-[100dvh] z-30">
+        <div className="opening fixed w-[100vw] h-[100dvh] z-10">
           <Image
             src="/opening.gif"
             fill
