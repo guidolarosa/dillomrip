@@ -17,7 +17,7 @@ const Cover = (props: any) => {
   return (
     <div className={`w-[calc(100vw)] h-[100dvh] fixed top-0 z-50 ${showCover && !gifLoaded ? '' : 'pointer-events-none'}`}>
       <div
-        className={`cover top-0 left-0 fixed w-full h-full bg-black z-20 transition duration-1000 flex items-center justify-center ${
+        className={`cover top-0 left-0 fixed w-full h-full bg-black z-20 transition duration-[3000ms] flex items-center justify-center ${
           showCover && !gifLoaded ? "opacity-100" : "opacity-0 blur-xl pointer-events-none"
         }`}
       >
@@ -44,6 +44,7 @@ const Cover = (props: any) => {
             alt="Opening"
             className="object-cover"
             onLoadingComplete={() => {
+              console.log("jdasd")
               setGifLoaded(true);
             }}
           />
