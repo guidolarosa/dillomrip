@@ -5,32 +5,32 @@ import { useEffect, useState, useRef } from "react";
 const ripOffers = [
   {
     name: "@ odd mami",
-    position: "bottom-[-120px] left-[-80px]",
+    position: "bottom-[-28%] left-[-17%]",
     image: "/rip-offers/ofrenda ripgang-6.png",
   },
   {
     name: "@Muerejoven",
-    position: "left-[30px] bottom-[-80px]",
+    position: "left-[5%] bottom-[-16%]",
     image: "/rip-offers/ofrenda ripgang-4.png",
   },
   {
     name: "@k4",
-    position: "left-[140px] bottom-[-80px]",
+    position: "left-[30%] bottom-[-10%]",
     image: "/rip-offers/ofrenda ripgang-7.png",
   },
   {
     name: "@lil quentin",
-    position: "left-[250px] bottom-[-40px]",
+    position: "left-[45%] bottom-[-20%]",
     image: "/rip-offers/ofrenda ripgang-1.png",
   },
   {
     name: "@Broke Carrey",
-    position: "left-[320px] bottom-[-96px]",
+    position: "left-[63%] bottom-[-10%]",
     image: "/rip-offers/ofrenda ripgang-2.png",
   },
   {
     name: "@Saramalacara",
-    position: "left-[340px] bottom-[-0px]",
+    position: "left-[78%] bottom-[-0]",
     image: "/rip-offers/ofrenda ripgang-5.png",
   },
 ];
