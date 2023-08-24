@@ -56,7 +56,7 @@ const Gravestone = (props: any) => {
 
   return (
     <div className="gravestone-container">
-      <div className="gravestone w-[235px] h-[307px] md:w-[456px] md:h-[590px] relative">
+      <div className="gravestone w-[235px] h-[307px] md:w-[456px] md:h-[460px] relative">
         <Image
           fill
           src="/gravestone.png"
