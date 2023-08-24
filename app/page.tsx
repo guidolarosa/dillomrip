@@ -2,29 +2,48 @@
 
 import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
+import AOS from "aos";
+import { TypeAnimation } from "react-type-animation";
+import { getOffers } from "@/utils/sanity";
 import Cover from "./components/Cover";
 import Fog from "./components/Fog";
 import Branches from "./components/Branches";
-import AOS from "aos";
-import moment from "moment";
-import { TypeAnimation } from "react-type-animation";
+import Gravestone from "./components/Gravestone";
 import Footer from "./components/Footer";
+import Offer from "./components/Offer";
 
 export default function Home() {
   const [showTypeAnimation, setShowTypeAnimation] = useState(false);
+  const [offers, setOffers] = useState([]);
   const typeRef: any = useRef(null);
 
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      offset: 280,
+      once: true,
+    });
 
     if (typeRef.current != null) {
-      console.log(typeRef.current.getBoundingClientRect());
       window.addEventListener("scroll", () => {
         if (window.scrollY > typeRef.current.getBoundingClientRect().y) {
           setShowTypeAnimation(true);
         }
       });
     }
+
+    const getRandomArbitrary = (min : any, max : any) => {
+      return Math.random() * (max - min) + min;
+    }
+
+    getOffers().then((data) => {
+      setOffers(
+        data.map((rawData: any) => ({
+          ...rawData,
+          left: getRandomArbitrary(10, 90),
+          top: getRandomArbitrary(30, 70),
+        }))
+      );
+    });
   }, []);
 
   return (
@@ -32,33 +51,19 @@ export default function Home() {
       <Cover />
       <Fog />
       <Branches />
-      <div className="gravestone-container">
-        <div className="gravestone w-[235px] h-[307px] md:w-[456px] md:h-[590px] relative animation-shake">
-          <Image
-            fill
-            src="/gravestone.png"
-            alt="Grave"
-            className="object-contain"
+      <Gravestone />
+      <div className="offers-container h-[320px] w-full relative">
+        {offers.map((offer: any, index: number) => (
+          <Offer
+            key={index}
+            index={index}
+            left={offer.left}
+            top={offer.top}
+            text={offer.text}
+            image={`/offers/ofrenda-${offer.imageId}.png`}
           />
-          <div className="candles w-[128px] aspect-square absolute bottom-[12px] left-[-106px]">
-            <Image
-              fill
-              src="/left-candles.png"
-              alt="Candles"
-              className="object-contain"
-            />
-          </div>
-          <div className="candles w-[184px] aspect-square absolute bottom-[-24px] right-[-140px]">
-            <Image
-              fill
-              src="/right-candles.png"
-              alt="Candles"
-              className="object-contain"
-            />
-          </div>
-        </div>
+        ))}
       </div>
-      <div className="offers-container h-[320px]"></div>
       <div className="flex flex-col items-center mb-[825px]">
         <p
           className="text-[24px] lg:text-[36px] text-center mb-[80px] h-[224px]"
@@ -96,7 +101,10 @@ export default function Home() {
             </>
           )}
         </p>
-        <div className="w-[331px] h-[80px] relative" data-aos="fade-up">
+        <div
+          className="w-[331px] h-[80px] relative transition duration-500 drop-shadow-[0px_0px_8px_transparent] hover:drop-shadow-[0px_0px_8px_white] cursor-pointer"
+          data-aos="fade-up"
+        >
           <Image
             fill
             src="/leave-offer.svg"

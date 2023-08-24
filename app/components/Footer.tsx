@@ -36,6 +36,7 @@ const Footer = (props: any) => {
       <div
         className="countdown font-['Editorial_New'] relative mt-auto"
         data-aos="fade-up"
+        data-aos-offset="0"
       >
         <div className="text-[56px] lg:text-[112px] flex">
           <span className="flex w-20 lg:w-[128px] justify-center">
