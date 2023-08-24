@@ -20,13 +20,13 @@ export default function RootLayout({
         <link rel="icon" href="/offers/ofrenda-1.png" sizes="any" />
       </head>
       <body className={`relative`}>
-        <div className="absolute w-[100vw] h-full z-0">
-          <Image
+        <div className="absolute w-[100vw] h-full z-0 bg-[url(/bkg.jpg)] bg-top bg-[100%_auto]">
+          {/* <Image
             src="/bkg.jpg"
             fill
             alt="Background"
             className="object-cover object-[0_-240px]"
-          />
+          /> */}
         </div>
         <header className="flex justify-center w-full py-[90px]">
           <div className="w-[320px] h-[48px] md:w-[600px] md:h-[90px] relative animate-float">
