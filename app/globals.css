@@ -55,13 +55,13 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: theme('colors.black'); 
+  background: theme('colors.red.950');  
   border-radius: 0px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: theme('colors.gray.500'); 
+  background: theme('colors.red.700'); 
   border-radius: 0px;
 }
 

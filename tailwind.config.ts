@@ -15,16 +15,24 @@ const config: Config = {
           "75%": { transform: "translate(320px)" },
         },
         float: {
-          "0%, 50%, 100%": {
-            transform: "translateY(0px) scale(1.05)",
+          "0%, 32%, 50%, 72%, 100%": {
+            transform: "translateY(0px) scale(1) rotate(0)",
             filter: "drop-shadow(0 0 20px white)",
           },
-          "25%": {
-            transform: "translateY(-10px) scale(1)",
+          "14%": {
+            transform: "translateY(-10px) scale(1.2)  rotate(2deg)",
             filter: "drop-shadow(0 0 10px white)",
           },
-          "75%": {
-            transform: "translateY(10px) scale(1)",
+          "42%": {
+            transform: "translateY(10px) scale(1.1)  rotate(-1.5deg)",
+            filter: "drop-shadow(0 0 10px white)",
+          },
+          "60%": {
+            transform: "translateY(10px) scale(1.15)  rotate(1deg)",
+            filter: "drop-shadow(0 0 10px white)",
+          },
+          "91%": {
+            transform: "translateY(10px) scale(1.1)  rotate(-2deg)",
             filter: "drop-shadow(0 0 10px white)",
           },
           
