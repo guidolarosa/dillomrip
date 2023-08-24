@@ -6,6 +6,7 @@ import ReactAudioPlayer from 'react-audio-player';
 
 const Cover = (props: any) => {
   const [showCover, setShowCover] = useState(true);
+  const [gifLoaded, setGifLoaded] = useState(false);
   const audioRef : any = useRef(null);
 
   useEffect(() => {
@@ -14,10 +15,10 @@ const Cover = (props: any) => {
   }, []);
 
   return (
-    <div className={`w-[calc(100vw)] h-[100dvh] fixed top-0 z-50 ${showCover ? '' : 'pointer-events-none'}`}>
+    <div className={`w-[calc(100vw)] h-[100dvh] fixed top-0 z-50 ${showCover && !gifLoaded ? '' : 'pointer-events-none'}`}>
       <div
         className={`cover top-0 left-0 fixed w-full h-full bg-black z-20 transition duration-1000 flex items-center justify-center ${
-          showCover ? "opacity-100" : "opacity-0 blur-xl pointer-events-none"
+          showCover && !gifLoaded ? "opacity-100" : "opacity-0 blur-xl pointer-events-none"
         }`}
       >
         <div
@@ -42,6 +43,9 @@ const Cover = (props: any) => {
             fill
             alt="Opening"
             className="object-cover"
+            onLoadingComplete={() => {
+              setGifLoaded(true);
+            }}
           />
         </div>
       )}
