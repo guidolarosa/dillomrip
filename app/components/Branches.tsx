@@ -45,7 +45,7 @@ const Branches = (props: any) => {
         />
       </div>
       <div
-        className="hidden lg:block w-[1200px] aspect-square fixed right-[-280px] lg:left-[-420px] top-[-380px] z-20 pointer-events-none rellax blur"
+        className="hidden lg:block w-[1200px] aspect-square fixed right-[-280px] lg:left-[-620px] top-[-380px] z-20 pointer-events-none rellax blur"
         data-rellax-speed="40"
         // style={{ transform: `translateY(${-scrollPosition * 1.2}px)` }}
       >

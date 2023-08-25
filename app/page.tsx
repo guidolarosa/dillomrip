@@ -5,6 +5,8 @@ import { useEffect, useState, useRef } from "react";
 import AOS from "aos";
 import { TypeAnimation } from "react-type-animation";
 import Rellax from 'rellax';
+import axios from "axios";
+import { createOffer } from "@/utils/sanity";
 import Cover from "./components/Cover";
 import Fog from "./components/Fog";
 import Offers from "./components/Offers";
@@ -14,6 +16,7 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   const [showTypeAnimation, setShowTypeAnimation] = useState(false);
+  const [offerSent, setOfferSent] = useState(false)
   const typeRef: any = useRef(null);
 
   useEffect(() => {
@@ -36,6 +39,19 @@ export default function Home() {
       });
     }
   }, []);
+
+  const handleOfferClick = async () => {
+    try {
+      const response = await createOffer({
+        imageId: 2,
+        offerText: 'Dillom te amooo 😍💙😭'
+      });
+      setOfferSent(true);
+      console.log(response)
+    } catch (err) {
+      console.log(err);
+    }
+  }
 
   return (
     <main className="flex min-h-screen flex-col items-center relative z-10">
@@ -84,6 +100,7 @@ export default function Home() {
         <div
           className="w-[331px] h-[80px] relative transition duration-500 drop-shadow-[0px_0px_8px_transparent] hover:drop-shadow-[0px_0px_8px_white] cursor-pointer"
           data-aos="fade-up"
+          onClick={handleOfferClick}
         >
           <Image
             fill

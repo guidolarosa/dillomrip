@@ -8,7 +8,7 @@ export const client = createClient({
   dataset: 'production',
   useCdn: true, // set to `false` to bypass the edge cache
   apiVersion: '2023-05-03', // use current date (YYYY-MM-DD) to target the latest API version
-  // token: process.env.SANITY_SECRET_TOKEN // Only if you want to update content with the client
+  token: process.env.NEXT_PUBLIC_SANITY_SECRET_TOKEN // Only if you want to update content with the client
 })
 
 // uses GROQ to query content: https://www.sanity.io/docs/groq
@@ -18,6 +18,10 @@ export async function getOffers() {
 }
 
 export async function createOffer(offer : any) {
-  const result = client.create(offer)
+  const result = client.create({
+    _type: 'offer',
+    imageId: 4,
+    text: 'Dillom te amooo 🥰💙😭'
+  });
   return result
 }

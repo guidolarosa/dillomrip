@@ -47,6 +47,28 @@ const config: Config = {
             transform: "translateY(0)"
           }
         },
+        offerfadeup: {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(32px)"
+          },
+          "1%": {
+            opacity: "1",
+            transform: "translateY(0px)"
+          },
+          "49%": {
+            opacity: "1",
+            transform: "translateY(0px)"
+          },
+          "50%": {
+            opacity: "0",
+            transform: "translateY(32px)"
+          },
+          "100%": {
+            opacity: "0",
+            transform: "translateY(32px)"
+          },
+        },
         wiggle: {
           '0%, 100%': { transform: 'rotate(-3deg)' },
           '50%': { transform: 'rotate(3deg)' },
@@ -55,9 +77,10 @@ const config: Config = {
       animation: {
         fog: "fog 90s ease-in-out infinite",
         fog1: "fog 70s ease-in-out infinite",
-        float: "float 10s ease-in-out infinite",
+        float: "float 60s ease-in-out infinite",
         fadeup: "fadeup 0.25s ease-out forwards",
         wiggle: 'wiggle 1s ease-in-out infinite',
+        offerfadeup: "offerfadeup 30s ease-out infinite",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
