@@ -209,8 +209,8 @@ const LeaveOffer = (props: any) => {
         </div>
       </div>
       <div
-        className={`transition-all  ${
-          !offerHidden ? "opacity-0 h-0" : "opacity-100"
+        className={`transition-all opacity-0 ${
+          !offerHidden ? "h-0" : "opacity-100"
         }`}
       >
         <div

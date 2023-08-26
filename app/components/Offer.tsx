@@ -11,7 +11,7 @@ const Offer = (props: any) => {
         animation: `offerfadeup 1s ease-out ${props.index + getRandomArbitrary(-1, 1) + 7 }s forwards`,
       }}
     >
-      <div className={`absolute w-[72px] h-[72px] flex justify-center group hover:scale-125 transition`}>
+      <div className={`absolute w-[58px] h-[58px] flex justify-center group hover:scale-125 transition`}>
         <Image
           src={props.image}
           fill

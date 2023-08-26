@@ -28,7 +28,7 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center relative z-10">
-      {/* <Cover /> */}
+      <Cover />
       <Butterflies />
       <Fog />
       <Branches />

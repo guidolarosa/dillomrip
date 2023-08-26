@@ -5,32 +5,32 @@ import { useEffect, useState, useRef } from "react";
 const ripOffers = [
   {
     name: "@ odd mami",
-    position: "bottom-[-28%] left-[-17%]",
+    position: "bottom-[-18%] left-[3%]",
     image: "/rip-offers/ofrenda ripgang-6.png",
   },
   {
     name: "@Muerejoven",
-    position: "left-[5%] bottom-[-16%]",
+    position: "left-[18%] bottom-[-12%]",
     image: "/rip-offers/ofrenda ripgang-4.png",
   },
   {
     name: "@k4",
-    position: "left-[30%] bottom-[-10%]",
+    position: "left-[40%] bottom-[-18%]",
     image: "/rip-offers/ofrenda ripgang-7.png",
   },
   {
     name: "@lil quentin",
-    position: "left-[45%] bottom-[-20%]",
+    position: "left-[55%] bottom-[-14%]",
     image: "/rip-offers/ofrenda ripgang-1.png",
   },
   {
     name: "@Broke Carrey",
-    position: "left-[63%] bottom-[-10%]",
+    position: "left-[65%] bottom-[-20%]",
     image: "/rip-offers/ofrenda ripgang-2.png",
   },
   {
     name: "@Saramalacara",
-    position: "left-[78%] bottom-[-0]",
+    position: "left-[70%] bottom-[-10%]",
     image: "/rip-offers/ofrenda ripgang-5.png",
   },
 ];
@@ -87,7 +87,7 @@ const Gravestone = (props: any) => {
             />
           </div>
         </div>
-        <div className="right-candles w-[128px] aspect-square absolute bottom-[-12px] right-[-60px]">
+        <div className="right-candles w-[128px] aspect-square absolute bottom-[-24px] right-[-120px]">
           <div className="candles w-full h-full absolute bottom-[60px] left-[-50px]">
             <Image
               fill
