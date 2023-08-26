@@ -111,7 +111,7 @@ const LeaveOffer = (props: any) => {
             }}
           >
             {offers.map((offer: any, index: number) => (
-              <SplideSlide>
+              <SplideSlide key={index}>
                 <div className="w-full flex items-center justify-center">
                   <div className="w-[68px] aspect-square relative">
                     <Image src={offer} fill alt={"Ofrenda"} />
