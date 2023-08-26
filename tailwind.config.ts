@@ -50,7 +50,6 @@ const config: Config = {
         offerfadeup: {
           "0%": {
             opacity: "0",
-            transform: "translateY(32px)",
             pointerEvents: "none"
           },
           "1%": {

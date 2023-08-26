@@ -53,7 +53,7 @@ const Gravestone = (props: any) => {
   }, [timer]);
 
   return (
-    <div className="gravestone-container">
+    <div className="gravestone-container relative z-10">
       <div className="gravestone w-[235px] h-[307px] md:w-[456px] md:h-[460px] relative">
         <Image
           fill

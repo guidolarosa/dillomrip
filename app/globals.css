@@ -69,3 +69,27 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: theme('colors.gray.200')
 }
+
+.splide .splide__arrow svg {
+  display: none;
+}
+.splide .splide__arrow {
+  background: transparent;
+}
+
+.splide .splide__arrow::before {
+  content: '';
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url('/arrow.svg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.splide .splide__arrow--next::before {
+  transform: rotate(180deg);
+}

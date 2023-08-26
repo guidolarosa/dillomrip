@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "aos/dist/aos.css"
 import "animate.css"
+import '@splidejs/react-splide/css';
 
 export const metadata: Metadata = {
   title: "Dillom.RIP",
