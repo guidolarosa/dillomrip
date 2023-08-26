@@ -37,22 +37,20 @@ const ripOffers = [
 
 const Gravestone = (props: any) => {
   const [gravestoneAnimated, setGravestoneAnimated] = useState(true);
-  const [timer, setTimer] = useState(0)
-  
+  const [timer, setTimer] = useState(0);
+
   useEffect(() => {
     const animationInterval = setInterval(() => {
-      setTimer(prevTimer => prevTimer + 1)
+      setTimer((prevTimer) => prevTimer + 1);
     }, 2000);
     return () => {
       clearInterval(animationInterval);
     };
   }, []);
-  
 
   useEffect(() => {
-    setGravestoneAnimated(!gravestoneAnimated)
+    setGravestoneAnimated(!gravestoneAnimated);
   }, [timer]);
-
 
   return (
     <div className="gravestone-container">
@@ -63,21 +61,81 @@ const Gravestone = (props: any) => {
           alt="Grave"
           className={`object-contain`}
         />
-        <div className="candles w-[128px] aspect-square absolute bottom-[12px] left-[-106px]">
-          <Image
-            fill
-            src="/left-candles.png"
-            alt="Candles"
-            className="object-contain"
-          />
+        <div className="left-candles w-[128px] aspect-square absolute bottom-[12px] left-[-30px]">
+          <div className="candles w-full h-full absolute bottom-0 left-0">
+            <Image
+              fill
+              src="/candles/1.gif"
+              alt="Candles"
+              className="object-contain"
+            />
+          </div>
+          <div className="candles w-full h-full absolute bottom-0 left-[-32px]">
+            <Image
+              fill
+              src="/candles/3.gif"
+              alt="Candles"
+              className="object-contain"
+            />
+          </div>
+          <div className="candles w-full h-full absolute bottom-[-24px] left-[-52px]">
+            <Image
+              fill
+              src="/candles/3.gif"
+              alt="Candles"
+              className="object-contain"
+            />
+          </div>
         </div>
-        <div className="candles w-[184px] aspect-square absolute bottom-[-24px] right-[-140px]">
-          <Image
-            fill
-            src="/right-candles.png"
-            alt="Candles"
-            className="object-contain"
-          />
+        <div className="right-candles w-[128px] aspect-square absolute bottom-[-12px] right-[-60px]">
+          <div className="candles w-full h-full absolute bottom-[60px] left-[-50px]">
+            <Image
+              fill
+              src="/candles/2.gif"
+              alt="Candles"
+              className="object-contain"
+            />
+          </div>
+          <div className="candles w-full h-full absolute bottom-[24px] left-[-24px]">
+            <Image
+              fill
+              src="/candles/1.gif"
+              alt="Candles"
+              className="object-contain"
+            />
+          </div>
+          <div className="candles w-full h-full absolute bottom-[0] left-[0]">
+            <Image
+              fill
+              src="/candles/1.gif"
+              alt="Candles"
+              className="object-contain"
+            />
+          </div>
+          <div className="candles w-full h-full absolute bottom-[-8px] left-[-18px] scale-75 origin-bottom">
+            <Image
+              fill
+              src="/candles/2.gif"
+              alt="Candles"
+              className="object-contain"
+            />
+          </div>
+          <div className="candles w-full h-full absolute bottom-[-24px] left-[-40px] scale-75 origin-bottom">
+            <Image
+              fill
+              src="/candles/3.gif"
+              alt="Candles"
+              className="object-contain"
+            />
+          </div>
+          <div className="candles w-full h-full absolute bottom-[-8px] left-[-62px] scale-75 origin-bottom">
+            <Image
+              fill
+              src="/candles/3.gif"
+              alt="Candles"
+              className="object-contain"
+            />
+          </div>
         </div>
         {ripOffers.map((offer: any, index: any) => (
           <RIPOffer

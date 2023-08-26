@@ -50,23 +50,18 @@ const config: Config = {
         offerfadeup: {
           "0%": {
             opacity: "0",
-            transform: "translateY(32px)"
+            transform: "translateY(32px)",
+            pointerEvents: "none"
           },
           "1%": {
             opacity: "1",
-            transform: "translateY(0px)"
-          },
-          "49%": {
-            opacity: "1",
-            transform: "translateY(0px)"
-          },
-          "50%": {
-            opacity: "0",
-            transform: "translateY(32px)"
+            transform: "translateY(0px)",
+            pointerEvents: "auto"
           },
           "100%": {
-            opacity: "0",
-            transform: "translateY(32px)"
+            opacity: "1",
+            transform: "translateY(0px)",
+            pointerEvents: "auto"
           },
         },
         wiggle: {

@@ -10,6 +10,8 @@ const Cover = (props: any) => {
   const audioRef : any = useRef(null);
 
   useEffect(() => {
+    const html = document.querySelector('html') as HTMLElement;
+    html.style.overflowY = 'hidden'
     const audio = new Audio('/audio.mp3');
     audioRef.current = audio;
   }, []);

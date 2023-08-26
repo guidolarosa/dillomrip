@@ -48,7 +48,7 @@ const Footer = (props: any) => {
       <div 
         className="absolute w-full h-full z-10 rellax"
         data-rellax-percentage="0.5"
-        data-rellax-speed="15"
+        data-rellax-speed="5"
       >
         <Image
           fill
@@ -60,6 +60,7 @@ const Footer = (props: any) => {
       <div
         className="absolute w-full h-full rellax"
         data-rellax-percentage="0.5"
+        data-rellax-speed="3"
       >
         <Image
           fill

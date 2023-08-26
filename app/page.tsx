@@ -16,6 +16,7 @@ import Footer from "./components/Footer";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 import { loadFirePreset } from "tsparticles-preset-fire";
+import Butterflies from "./components/Butterflies";
 
 
 export default function Home() {
@@ -105,7 +106,8 @@ export default function Home() {
         init={particlesInit}
         loaded={particlesLoaded}
       />
-      <Cover />
+      {/* <Cover /> */}
+      <Butterflies />
       <Fog />
       <Branches />
       <Gravestone />
