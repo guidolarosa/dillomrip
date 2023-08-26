@@ -1,12 +1,8 @@
 "use client";
 
-import Image from "next/image";
-import { useEffect, useState, useRef, useCallback } from "react";
+import { useEffect } from "react";
 import AOS from "aos";
-import { TypeAnimation } from "react-type-animation";
 import Rellax from "rellax";
-import axios from "axios";
-import { createOffer } from "@/utils/sanity";
 import Cover from "./components/Cover";
 import Fog from "./components/Fog";
 import Offers from "./components/Offers";
@@ -32,7 +28,7 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center relative z-10">
-      {/* <Cover /> */}
+      <Cover />
       <Butterflies />
       <Fog />
       <Branches />
