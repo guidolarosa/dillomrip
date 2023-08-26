@@ -1,18 +1,20 @@
-'use client'
+"use client";
 
 import { TypeAnimation } from "react-type-animation";
 import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { createOffer } from "@/utils/sanity";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
+const { Splide, SplideSlide } = require("@splidejs/react-splide");
 
-const LeaveOffer = (props) => {
+const LeaveOffer = (props: any) => {
   const [showTypeAnimation, setShowTypeAnimation] = useState(false);
   const [offerSent, setOfferSent] = useState(false);
   const [offerText, setOfferText] = useState("");
+  const [offerImageId, setOfferImageId] = useState(0);
+  const [offerHidden, setOfferHidden] = useState(true);
 
-  const typeRef = useRef(null);
-  const splideRef = useRef(null);
+  const typeRef: any = useRef(null);
+  const splideRef: any = useRef(null);
 
   useEffect(() => {
     if (typeRef.current != null) {
@@ -22,29 +24,35 @@ const LeaveOffer = (props) => {
         }
       });
     }
-  });
+  }, []);
 
-  const onOfferUpdate = (e ) => {
+  const onOfferUpdate = (e: any) => {
     setOfferText(e.target.value);
   };
 
-  const handleOfferClick = async () => {
+  const handleOfferClick = () => {
+    setOfferHidden(false);
+  };
+  
+  const submitOffer = async () => {
+    let activeSlideId : any = document.querySelector('.splide__slide.is-active:not(.splide__slide--clone)')?.getAttribute('id');
+    let imageId = activeSlideId.substr(activeSlideId.length - 1)
     try {
       const response = await createOffer({
-        imageId: 2,
-        offerText: "Dillom te amooo 😍💙😭",
+        imageId: imageId,
+        text: offerText,
       });
-      setOfferSent(true);
+      // setOfferSent(true);
       console.log(response);
     } catch (err) {
       console.log(err);
     }
-  };
-
-  const onSplideMove = (e ) => {
-    console.log(e)
-    // console.log(splideRef.current)
   }
+
+  const onSplideMove = (e: any) => {
+    console.log(e);
+    // console.log(splideRef.current)
+  };
 
   const offers = [
     "/offers/ofrenda-1.png",
@@ -93,8 +101,8 @@ const LeaveOffer = (props) => {
           </>
         )}
       </p>
-      <div>
-        <div className="w-[320px] aspect-square mt-[42px] flex flex-col relative">
+      <div className={`transition-all duration-1000 overflow-hidden max-h-0 ${offerHidden ? "" : "max-h-[580px]"}`}>
+        <div className="w-[320px] aspect-square mt-[42px] flex flex-col relative top-4">
           <div className="absolute w-full h-full flex justify-center top-[-58px] pointer-events-none">
             <div className="w-[116px] h-[174px] relative">
               <Image src={"/fire-selector.png"} fill alt={"Ofrenda"} />
@@ -102,9 +110,6 @@ const LeaveOffer = (props) => {
           </div>
           <Splide
             ref={splideRef}
-            paginationUpdated={() => {
-              console.log('hello')
-            }}
             options={{
               type: "loop",
               pagination: false,
@@ -123,22 +128,35 @@ const LeaveOffer = (props) => {
           <input
             value={offerText}
             placeholder="Dejá tu ofrenda..."
-            className="mt-20 bg-transparent border-b text-center text-[32px]"
+            className="mt-20 bg-transparent border-b text-center text-[32px] mb-8 outline-none"
             onChange={onOfferUpdate}
           />
+          <div
+            className="w-[331px] h-[80px] relative transition duration-500 drop-shadow-[0px_0px_8px_transparent] hover:drop-shadow-[0px_0px_8px_white] cursor-pointer"
+            onClick={submitOffer}
+          >
+            <Image
+              fill
+              src="/firmar.svg"
+              alt="Grave"
+              className="object-contain"
+            />
+          </div>
         </div>
       </div>
-      <div
-        className="w-[331px] h-[80px] relative transition duration-500 drop-shadow-[0px_0px_8px_transparent] hover:drop-shadow-[0px_0px_8px_white] cursor-pointer"
-        data-aos="fade-up"
-        onClick={handleOfferClick}
-      >
-        <Image
-          fill
-          src="/leave-offer.svg"
-          alt="Grave"
-          className="object-contain"
-        />
+      <div className={`transition ${!offerHidden ? 'opacity-0' : 'opacity-100'}`}>
+        <div
+          className={`w-[331px] h-[80px] relative transition duration-500 drop-shadow-[0px_0px_8px_transparent] hover:drop-shadow-[0px_0px_8px_white] cursor-pointer`}
+          data-aos="fade-up"
+          onClick={handleOfferClick}
+        >
+          <Image
+            fill
+            src="/leave-offer.svg"
+            alt="Grave"
+            className="object-contain"
+          />
+        </div>
       </div>
     </div>
   );

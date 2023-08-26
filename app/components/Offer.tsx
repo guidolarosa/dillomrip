@@ -8,7 +8,7 @@ const Offer = (props: any) => {
       style={{
         left: `${props.left}%`,
         top: `${props.top}%`,
-        animation: `offerfadeup 100s ease-out ${props.index + getRandomArbitrary(-1, 1) + 7 }s infinite`,
+        animation: `offerfadeup 100s ease-out ${props.index + getRandomArbitrary(-1, 1) + 7 }s`,
       }}
     >
       <div className={`absolute w-[72px] h-[72px] flex justify-center group hover:scale-125 transition`}>

@@ -20,8 +20,8 @@ export async function getOffers() {
 export async function createOffer(offer : any) {
   const result = client.create({
     _type: 'offer',
-    imageId: 4,
-    text: 'Dillom te amooo 🥰💙😭'
+    imageId: offer.imageId,
+    text: offer.text
   });
   return result
 }
