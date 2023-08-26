@@ -6,13 +6,13 @@ import { useState, useRef, useEffect } from "react";
 import { createOffer } from "@/utils/sanity";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 
-const LeaveOffer = (props: any) => {
+const LeaveOffer = (props) => {
   const [showTypeAnimation, setShowTypeAnimation] = useState(false);
   const [offerSent, setOfferSent] = useState(false);
   const [offerText, setOfferText] = useState("");
 
-  const typeRef: any = useRef(null);
-  const splideRef: any = useRef(null);
+  const typeRef = useRef(null);
+  const splideRef = useRef(null);
 
   useEffect(() => {
     if (typeRef.current != null) {
@@ -24,7 +24,7 @@ const LeaveOffer = (props: any) => {
     }
   });
 
-  const onOfferUpdate = (e : any) => {
+  const onOfferUpdate = (e ) => {
     setOfferText(e.target.value);
   };
 
@@ -41,7 +41,7 @@ const LeaveOffer = (props: any) => {
     }
   };
 
-  const onSplideMove = (e : any) => {
+  const onSplideMove = (e ) => {
     console.log(e)
     // console.log(splideRef.current)
   }
@@ -110,7 +110,7 @@ const LeaveOffer = (props: any) => {
               pagination: false,
             }}
           >
-            {offers.map((offer: any, index: number) => (
+            {offers.map((offer, index) => (
               <SplideSlide key={index}>
                 <div className="w-full flex items-center justify-center">
                   <div className="w-[68px] aspect-square relative">
