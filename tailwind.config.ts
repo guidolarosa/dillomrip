@@ -14,7 +14,15 @@ const config: Config = {
           "25%": { transform: "translate(-320px)" },
           "75%": { transform: "translate(320px)" },
         },
-        float: {
+        fade: {
+          "0%": {
+            opacity: "0",
+          },
+          "100%": {
+            opacity: "1",
+          },
+        },
+        floatLight: {
           "0%, 32%, 50%, 72%, 100%": {
             transform: "translateY(0px) scale(1) rotate(0)",
             filter: "drop-shadow(0 0 20px white)",
@@ -35,46 +43,58 @@ const config: Config = {
             transform: "translateY(10px) scale(1.1)  rotate(-2deg)",
             filter: "drop-shadow(0 0 10px white)",
           },
-          
+        },
+        float: {
+          "0%, 32%, 50%, 72%, 100%": {
+            transform: "translateY(0px) scale(1) rotate(0)",
+          },
+          "14%": {
+            transform: "translateY(-10px) scale(1.2)  rotate(2deg)",
+          },
+          "42%": {
+            transform: "translateY(10px) scale(1.1)  rotate(-1.5deg)",
+          },
+          "60%": {
+            transform: "translateY(10px) scale(1.15)  rotate(1deg)",
+          },
+          "91%": {
+            transform: "translateY(10px) scale(1.1)  rotate(-2deg)",
+          },
         },
         fadeup: {
           "0%": {
             opacity: "0",
-            transform: "translateY(32px)"
+            transform: "translateY(32px)",
           },
           "100%": {
             opacity: "1",
-            transform: "translateY(0)"
-          }
+            transform: "translateY(0)",
+          },
         },
         offerfadeup: {
           "0%": {
             opacity: "0",
-            pointerEvents: "none"
-          },
-          "1%": {
-            opacity: "1",
-            transform: "translateY(0px)",
-            pointerEvents: "auto"
+            pointerEvents: "none",
           },
           "100%": {
             opacity: "1",
-            transform: "translateY(0px)",
-            pointerEvents: "auto"
+            pointerEvents: "auto",
           },
         },
         wiggle: {
-          '0%, 100%': { transform: 'rotate(-3deg)' },
-          '50%': { transform: 'rotate(3deg)' },
-        }
+          "0%, 100%": { transform: "rotate(-3deg)" },
+          "50%": { transform: "rotate(3deg)" },
+        },
       },
       animation: {
         fog: "fog 90s ease-in-out infinite",
         fog1: "fog 70s ease-in-out infinite",
+        floatLight: "float 60s ease-in-out infinite",
         float: "float 60s ease-in-out infinite",
+        fade: "fade 0.25s ease-out forwards",
         fadeup: "fadeup 0.25s ease-out forwards",
-        wiggle: 'wiggle 1s ease-in-out infinite',
-        offerfadeup: "offerfadeup 30s ease-out infinite",
+        wiggle: "wiggle 1s ease-in-out infinite",
+        offerfadeup: "offerfadeup 1s ease-out infinite",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

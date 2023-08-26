@@ -94,3 +94,9 @@ body {
 .splide .splide__arrow--next::before {
   transform: rotate(180deg);
 }
+
+.splide-inactive .splide .splide__arrow {
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s ease-in-out all;
+}

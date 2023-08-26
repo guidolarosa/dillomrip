@@ -12,6 +12,9 @@ const LeaveOffer = (props: any) => {
   const [offerText, setOfferText] = useState("");
   const [offerImageId, setOfferImageId] = useState(0);
   const [offerHidden, setOfferHidden] = useState(true);
+  const [offerValid, setOfferValid] = useState(false);
+  const [offerMove, setOfferMove] = useState(316);
+  const [offerPositioned, setOfferPositioned] = useState()
 
   const typeRef: any = useRef(null);
   const splideRef: any = useRef(null);
@@ -26,32 +29,43 @@ const LeaveOffer = (props: any) => {
     }
   }, []);
 
+  useEffect(() => {
+    if (offerSent) {
+      setTimeout(() => {
+        setOfferMove(-300)
+      }, 2000)
+    }
+  }, [offerSent])
+
   const onOfferUpdate = (e: any) => {
     setOfferText(e.target.value);
+    if (e.target.value.length > 0 && e.target.value.length < 40) {
+      setOfferValid(true);
+    } else {
+      setOfferValid(false);
+    }
   };
 
   const handleOfferClick = () => {
     setOfferHidden(false);
   };
-  
+
   const submitOffer = async () => {
-    let activeSlideId : any = document.querySelector('.splide__slide.is-active:not(.splide__slide--clone)')?.getAttribute('id');
-    let imageId = activeSlideId.substr(activeSlideId.length - 1)
+    let activeSlideId: any = document
+      .querySelector(".splide__slide.is-active:not(.splide__slide--clone)")
+      ?.getAttribute("id");
+    let imageId = activeSlideId.substr(activeSlideId.length - 1);
+    setOfferImageId(parseInt(imageId) - 1);
     try {
       const response = await createOffer({
         imageId: imageId,
         text: offerText,
       });
-      // setOfferSent(true);
+      setOfferSent(true);
       console.log(response);
     } catch (err) {
       console.log(err);
     }
-  }
-
-  const onSplideMove = (e: any) => {
-    console.log(e);
-    // console.log(splideRef.current)
   };
 
   const offers = [
@@ -67,7 +81,7 @@ const LeaveOffer = (props: any) => {
   ];
 
   return (
-    <div className="flex flex-col items-center mb-[98px]">
+    <div className="flex flex-col items-center mb-[98px] mt-20 relative">
       <p
         className="text-[24px] lg:text-[36px] text-center mb-[80px] h-[180px]"
         ref={typeRef}
@@ -101,50 +115,89 @@ const LeaveOffer = (props: any) => {
           </>
         )}
       </p>
-      <div className={`transition-all duration-1000 overflow-hidden max-h-0 ${offerHidden ? "" : "max-h-[580px]"}`}>
-        <div className="w-[320px] aspect-square mt-[42px] flex flex-col relative top-4">
-          <div className="absolute w-full h-full flex justify-center top-[-58px] pointer-events-none">
-            <div className="w-[116px] h-[174px] relative">
-              <Image src={"/fire-selector.png"} fill alt={"Ofrenda"} />
-            </div>
-          </div>
-          <Splide
-            ref={splideRef}
-            options={{
-              type: "loop",
-              pagination: false,
-            }}
-          >
-            {offers.map((offer, index) => (
-              <SplideSlide key={index}>
-                <div className="w-full flex items-center justify-center">
-                  <div className="w-[68px] aspect-square relative">
-                    <Image src={offer} fill alt={"Ofrenda"} />
-                  </div>
-                </div>
-              </SplideSlide>
-            ))}
-          </Splide>
-          <input
-            value={offerText}
-            placeholder="Dejá tu ofrenda..."
-            className="mt-20 bg-transparent border-b text-center text-[32px] mb-8 outline-none"
-            onChange={onOfferUpdate}
-          />
-          <div
-            className="w-[331px] h-[80px] relative transition duration-500 drop-shadow-[0px_0px_8px_transparent] hover:drop-shadow-[0px_0px_8px_white] cursor-pointer"
-            onClick={submitOffer}
-          >
-            <Image
-              fill
-              src="/firmar.svg"
-              alt="Grave"
-              className="object-contain"
-            />
+      <div
+        className={`spirit-offer grayscale w-[68px] aspect-square absolute transition-all left-[calc(50%-34px)] duration-1000 ${
+          offerSent ? "opacity-100" : "opacity-0"
+        }`}
+        style={{
+          top: `${offerMove}px`
+        }}
+      >
+        <Image src={offers[offerImageId]} fill alt={"Ofrenda"} />
+        <div className={"absolute w-full"}>
+          <div className="whitespace-nowrap text-center text-[18px] text-gray-400 absolute bottom-[-102px] group-hover:text-white filter drop-shadow-[0px_0px_8px_black]">
+            {offerText}
           </div>
         </div>
       </div>
-      <div className={`transition ${!offerHidden ? 'opacity-0' : 'opacity-100'}`}>
+      <div
+        className={`transition-all duration-1000 overflow-hidden h-0 opacity-0 blur-lg ${
+          offerHidden ? "" : "h-[580px] opacity-100 blur-none"
+        }`}
+      >
+        <div className="w-[320px] aspect-square mt-[42px] flex flex-col relative top-4">
+          <div className="absolute w-full h-full flex justify-center top-[-58px] pointer-events-none">
+            <div
+              className={`w-[116px] h-[174px] relative transition-all ${
+                offerSent ? "opacity-0 blur-lg" : "opacity-100 blur-none"
+              }`}
+            >
+              <Image src={"/fire-selector.png"} fill alt={"Ofrenda"} />
+            </div>
+          </div>
+          <div className={`${offerSent ? "splide-inactive" : ""}`}>
+            <Splide
+              ref={splideRef}
+              options={{
+                type: "loop",
+                pagination: false,
+              }}
+            >
+              {offers.map((offer, index) => (
+                <SplideSlide key={index}>
+                  <div className="w-full flex items-center justify-center">
+                    <div className="w-[68px] aspect-square relative">
+                      <Image src={offer} fill alt={"Ofrenda"} />
+                    </div>
+                  </div>
+                </SplideSlide>
+              ))}
+            </Splide>
+          </div>
+          <input
+            value={offerText}
+            placeholder="Dejá tu ofrenda..."
+            className={`mt-20 bg-transparent border-b text-center text-[32px] mb-8 outline-none transition-all ${
+              offerSent ? "opacity-0 height-0 overflow-hidden" : ""
+            }`}
+            onChange={onOfferUpdate}
+          />
+          <div
+            className={`transition-all ${
+              offerSent ? "opacity-0 height-0 overflow-hidden" : ""
+            }`}
+          >
+            <div
+              className={`w-[331px] h-[80px] relative transition duration-500 drop-shadow-[0px_0px_8px_transparent] hover:drop-shadow-[0px_0px_8px_white] cursor-pointer ${
+                offerValid ? "opacity-100" : "opacity-50 pointer-events-none"
+              }`}
+              onClick={submitOffer}
+            >
+              <Image
+                fill
+                src="/firmar.svg"
+                alt="Grave"
+                className="object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className={`transition-all opacity-0 ${
+          !offerHidden ? "" : "opacity-100"
+        }`}
+      >
         <div
           className={`w-[331px] h-[80px] relative transition duration-500 drop-shadow-[0px_0px_8px_transparent] hover:drop-shadow-[0px_0px_8px_white] cursor-pointer`}
           data-aos="fade-up"

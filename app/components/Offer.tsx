@@ -8,7 +8,7 @@ const Offer = (props: any) => {
       style={{
         left: `${props.left}%`,
         top: `${props.top}%`,
-        animation: `offerfadeup 100s ease-out ${props.index + getRandomArbitrary(-1, 1) + 7 }s`,
+        animation: `offerfadeup 1s ease-out ${props.index + getRandomArbitrary(-1, 1) + 7 }s forwards`,
       }}
     >
       <div className={`absolute w-[72px] h-[72px] flex justify-center group hover:scale-125 transition`}>
@@ -18,7 +18,7 @@ const Offer = (props: any) => {
           alt={'Offer'}
           className="object-contain"
         />
-        <div className="whitespace-nowrap text-center text-[18px] text-gray-400 absolute bottom-[-32px] group-hover:text-white">
+        <div className="whitespace-nowrap text-center text-[18px] text-gray-400 absolute bottom-[-32px] group-hover:text-white filter drop-shadow-[0px_0px_8px_black]">
           {props.text}
         </div>
       </div>
