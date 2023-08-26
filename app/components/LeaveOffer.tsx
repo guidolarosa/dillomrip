@@ -14,7 +14,7 @@ const LeaveOffer = (props: any) => {
   const [offerHidden, setOfferHidden] = useState(true);
   const [offerValid, setOfferValid] = useState(false);
   const [offerMove, setOfferMove] = useState(316);
-  const [offerPositioned, setOfferPositioned] = useState()
+  const [offerPositioned, setOfferPositioned] = useState();
 
   const typeRef: any = useRef(null);
   const splideRef: any = useRef(null);
@@ -32,10 +32,10 @@ const LeaveOffer = (props: any) => {
   useEffect(() => {
     if (offerSent) {
       setTimeout(() => {
-        setOfferMove(-300)
-      }, 2000)
+        setOfferMove(-300);
+      }, 2000);
     }
-  }, [offerSent])
+  }, [offerSent]);
 
   const onOfferUpdate = (e: any) => {
     setOfferText(e.target.value);
@@ -116,16 +116,16 @@ const LeaveOffer = (props: any) => {
         )}
       </p>
       <div
-        className={`spirit-offer grayscale w-[68px] aspect-square absolute transition-all left-[calc(50%-34px)] duration-1000 ${
+        className={`spirit-offer grayscale w-[68px] aspect-square absolute transition-all left-[calc(50%-34px)] duration-[3000ms] ${
           offerSent ? "opacity-100" : "opacity-0"
         }`}
         style={{
-          top: `${offerMove}px`
+          top: `${offerMove}px`,
         }}
       >
         <Image src={offers[offerImageId]} fill alt={"Ofrenda"} />
-        <div className={"absolute w-full"}>
-          <div className="whitespace-nowrap text-center text-[18px] text-gray-400 absolute bottom-[-102px] group-hover:text-white filter drop-shadow-[0px_0px_8px_black]">
+        <div className={"absolute w-full h-[24px] bottom-[-25px] flex justify-center"}>
+          <div className="whitespace-nowrap text-center text-[18px] text-gray-400 absolute group-hover:text-white filter drop-shadow-[0px_0px_8px_black]">
             {offerText}
           </div>
         </div>
@@ -168,10 +168,25 @@ const LeaveOffer = (props: any) => {
             value={offerText}
             placeholder="Dejá tu ofrenda..."
             className={`mt-20 bg-transparent border-b text-center text-[32px] mb-8 outline-none transition-all ${
-              offerSent ? "opacity-0 height-0 overflow-hidden" : ""
+              offerSent ? "opacity-0 height-0 overflow-hidden hidden m-0" : ""
             }`}
             onChange={onOfferUpdate}
           />
+          <div
+            className={`mt-10 ${offerSent ? "opacity-100" : "opacity-0 h-0 mt-0"}`}
+          >
+            <div
+              className={`w-[331px] h-[80px] relative transition duration-500 drop-shadow-[0px_0px_8px_transparent] `}
+              onClick={submitOffer}
+            >
+              <Image
+                fill
+                src="/compartir.svg"
+                alt="Grave"
+                className="object-contain"
+              />
+            </div>
+          </div>
           <div
             className={`transition-all ${
               offerSent ? "opacity-0 height-0 overflow-hidden" : ""
@@ -194,8 +209,8 @@ const LeaveOffer = (props: any) => {
         </div>
       </div>
       <div
-        className={`transition-all opacity-0 ${
-          !offerHidden ? "" : "opacity-100"
+        className={`transition-all  ${
+          !offerHidden ? "opacity-0 h-0" : "opacity-100"
         }`}
       >
         <div
