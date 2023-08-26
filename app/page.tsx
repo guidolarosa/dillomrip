@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import Rellax from "rellax";
 import Cover from "./components/Cover";
@@ -13,6 +13,7 @@ import Butterflies from "./components/Butterflies";
 import LeaveOffer from "./components/LeaveOffer";
 
 export default function Home() {
+  const [showCover, setShowCover] = useState(false);
   useEffect(() => {
     AOS.init({
       offset: 280,
@@ -28,7 +29,9 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center relative z-10">
-      <Cover />
+      {showCover && (
+        <Cover />
+      )}
       <Butterflies />
       <Fog />
       <Branches />
