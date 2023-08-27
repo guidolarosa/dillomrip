@@ -1,4 +1,6 @@
 import Image from "next/image";
+import LeftCandles from "./LeftCandles";
+import RightCandles from "./RightCandles";
 
 const Book = (props: any) => {
   return (
