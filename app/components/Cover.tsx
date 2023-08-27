@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { BsFillVolumeUpFill, BsFillVolumeMuteFill } from "react-icons/bs";
 
-const Cover = (props: any) => {
+const Cover = ( props : any ) => {
   const [showCover, setShowCover] = useState(true);
   const [gifLoaded, setGifLoaded] = useState(false);
   const [soundOn, setSoundOn] = useState(true);
@@ -28,7 +28,7 @@ const Cover = (props: any) => {
             size="24px"
             onClick={() => {
               setSoundOn(false);
-              audioRef.current.pause = true;
+              audioRef.current.pause();
             }}
           />
         ) : (
