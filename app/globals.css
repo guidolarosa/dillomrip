@@ -32,18 +32,14 @@
 
 html {
   overflow-x: hidden;
+  background: theme('colors.black');
 }
 
 body {
   color: theme('colors.white');
   font-family: 'PPNeue';
   overflow-x: hidden;
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: theme('colors.black');
 }
 
 ::-webkit-scrollbar {
