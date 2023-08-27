@@ -10,9 +10,8 @@ import Branches from "./components/Branches";
 import Gravestone from "./components/Gravestone";
 import Footer from "./components/Footer";
 import Butterflies from "./components/Butterflies";
-import LeaveOffer from "./components/LeaveOffer";
+import SubmitOffer from "./components/SubmitOffer";
 import Poem from "./components/Poem";
-import Fire from "./components/Fire";
 
 export default function Home() {
   const [showCover, setShowCover] = useState(true);
@@ -43,7 +42,7 @@ export default function Home() {
             <Gravestone />
             <Offers />
             <Poem />
-            <LeaveOffer />
+            <SubmitOffer />
           </>
         )}
       </main>

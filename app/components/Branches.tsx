@@ -21,7 +21,7 @@ const Branches = (props: any) => {
   return (
     <>
       <div
-        className="w-[540px] lg:w-[800px] aspect-square fixed left-[-280px] lg:left-[-240px] top-[20px] z-20 pointer-events-none rellax"
+        className="hidden lg:block w-[540px] lg:w-[800px] aspect-square fixed left-[-280px] lg:left-[-240px] top-[20px] z-20 pointer-events-none rellax"
         data-rellax-speed="15"
       >
         <Image
@@ -32,7 +32,7 @@ const Branches = (props: any) => {
         />
       </div>
       <div
-        className="w-[1000px] aspect-square fixed right-[-280px] lg:right-0 top-[160px] z-20 pointer-events-none rellax"
+        className="hidden lg:block w-[1000px] aspect-square fixed right-[-280px] lg:right-0 top-[160px] z-20 pointer-events-none rellax"
         data-rellax-speed="18"
       >
         <Image

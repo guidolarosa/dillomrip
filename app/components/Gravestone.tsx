@@ -4,6 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import LeftCandles from "./LeftCandles";
 import LeftCandlesGroup from "./LeftCandlesGroup";
 import RightCandles from "./RightCandles";
+import RightCandlesGroup from "./RightCandlesGroup";
 import { ripOffers } from "@/content/ripOffers";
 
 const Gravestone = (props: any) => {
@@ -35,6 +36,7 @@ const Gravestone = (props: any) => {
         <LeftCandles />
         <LeftCandlesGroup />
         <RightCandles />
+        <RightCandlesGroup />
         {ripOffers.map((offer: any, index: any) => (
           <RIPOffer
             key={index}
