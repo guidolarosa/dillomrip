@@ -44,6 +44,7 @@ const Footer = (props: any) => {
       clearInterval(countdownTimer);
     };
   }, []);
+
   return (
     <footer className="flex justify-center bg-[url('/fire-footer.png')] w-full h-[380px] lg:h-[700px] pb-[32px] overflow-hidden relative flex-col items-center">
       <div 

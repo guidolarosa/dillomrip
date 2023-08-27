@@ -93,7 +93,7 @@ const config: Config = {
         float: "float 60s ease-in-out infinite",
         fade: "fade 0.25s ease-out forwards",
         fadeup: "fadeup 0.25s ease-out forwards",
-        wiggle: "wiggle 0.5s ease-in-out infinite",
+        wiggle: "wiggle 5s ease-in-out infinite",
         offerfadeup: "offerfadeup 1s ease-out infinite",
       },
       backgroundImage: {

@@ -21,9 +21,8 @@ const Branches = (props: any) => {
   return (
     <>
       <div
-        className="w-[500px] aspect-square fixed left-[-280px] lg:left-0 top-[20px] z-20 pointer-events-none rellax"
+        className="w-[540px] lg:w-[800px] aspect-square fixed left-[-280px] lg:left-[-240px] top-[20px] z-20 pointer-events-none rellax"
         data-rellax-speed="15"
-        // style={{ transform: `translateY(${-scrollPosition * 1.2}px)` }}
       >
         <Image
           src="/branch-1.png"
@@ -33,9 +32,8 @@ const Branches = (props: any) => {
         />
       </div>
       <div
-        className="w-[680px] aspect-square fixed right-[-280px] lg:right-0 top-[160px] z-20 pointer-events-none rellax"
+        className="w-[1000px] aspect-square fixed right-[-280px] lg:right-0 top-[160px] z-20 pointer-events-none rellax"
         data-rellax-speed="18"
-        // style={{ transform: `translateY(${-scrollPosition * 1.2}px)` }}
       >
         <Image
           src="/branch-2.png"

@@ -12,11 +12,9 @@ import Footer from "./components/Footer";
 import Butterflies from "./components/Butterflies";
 import LeaveOffer from "./components/LeaveOffer";
 import Poem from "./components/Poem";
+import Fire from "./components/Fire";
 
 export default function Home() {
-  // const [showCover, setShowCover] = useState(
-  //   process.env.NEXT_PUBLIC_ENV === "development" ? false : true
-  // );
   const [showCover, setShowCover] = useState(true);
 
   useEffect(() => {

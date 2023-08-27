@@ -4,7 +4,7 @@ const LeaveOfferButton = (props: any) => {
   return (
     <div
       onClick={props.onClick}
-      className={`transition-all h-full absolute top-0 flex flex-col justify-center ${
+      className={`transition-all h-full absolute top-0 flex flex-col justify-start ${
         props.show ? "opacity-100" : "opacity-0 pointer-events-none blur-lg"
       }`}
     >
