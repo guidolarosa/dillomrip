@@ -20,7 +20,8 @@ const Cover = ( props : any ) => {
   }, []);
 
   useEffect(() => {
-    setShowCover(gifLoaded)
+    setShowCover(!gifLoaded);
+    props.setShowPage(true)
   }, [gifLoaded])
 
   return (

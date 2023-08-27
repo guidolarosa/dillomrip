@@ -46,7 +46,7 @@ const Footer = (props: any) => {
   }, []);
 
   return (
-    <footer className="flex justify-center bg-[url('/fire-footer.png')] w-full h-[380px] lg:h-[700px] pb-[32px] overflow-hidden relative flex-col items-center">
+    <footer className="flex justify-center bg-[url('/fire-footer.png')] w-full h-[380px] lg:h-[700px] pb-[32px] overflow-hidden relative flex-col items-center bg-black z-10">
       <div 
         className="absolute w-full h-full z-10 rellax"
         data-rellax-percentage="0.5"

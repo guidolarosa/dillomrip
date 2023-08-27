@@ -16,6 +16,7 @@ import Fire from "./components/Fire";
 
 export default function Home() {
   const [showCover, setShowCover] = useState(true);
+  const [showPage, setShowPage] = useState(false);
 
   useEffect(() => {
     AOS.init({
@@ -32,14 +33,18 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center relative z-10">
-      {showCover && <Cover />}
+      {showCover && <Cover setShowPage={setShowPage} />}
+      <Branches />
       <Butterflies />
       <Fog />
-      <Branches />
-      <Gravestone />
-      <Offers />
-      <Poem />
-      <LeaveOffer />
+      {showPage && (
+        <>
+          <Gravestone />
+          <Offers />
+          <Poem />
+          <LeaveOffer />
+        </>
+      )}
       <Footer />
     </main>
   );

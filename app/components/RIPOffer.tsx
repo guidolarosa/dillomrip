@@ -5,7 +5,7 @@ const RIPOffer = (props: any) => {
     <div
       className={`flex flex-col items-center absolute bottom-0 animate-fade opacity-0`}
       style={{
-        animationDelay: `${(props.index + 3) * 750}ms`,
+        animationDelay: `${(props.index + 8) * 750}ms`,
         bottom: `${props.position.bottom}%`,
         left: `${props.position.left}%`
       }}
