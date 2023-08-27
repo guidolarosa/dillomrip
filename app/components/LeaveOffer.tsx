@@ -1,10 +1,7 @@
 "use client";
 
-import Image from "next/image";
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { createOffer } from "@/utils/sanity";
-import Poem from './Poem';
-import SpiritOffer from './SpiritOffer';
 import { offerImages } from "@/content/offerImages";
 import OfferSubmitForm from "./OfferSubmitForm";
 import Share from "./Share";
@@ -12,29 +9,8 @@ import LeaveOfferButton from "./LeaveOfferButton";
 
 const LeaveOffer = (props: any) => {
   const [step, setStep] = useState('init')
-  const [offerSent, setOfferSent] = useState(false);
   const [offerText, setOfferText] = useState("");
   const [offerImageId, setOfferImageId] = useState(0);
-  const [offerHidden, setOfferHidden] = useState(true);
-  const [offerValid, setOfferValid] = useState(false);
-  const [offerMove, setOfferMove] = useState(316);;
-
-  useEffect(() => {
-    if (offerSent) {
-      setTimeout(() => {
-        setOfferMove(-300);
-      }, 2000);
-    }
-  }, [offerSent]);
-
-  const onOfferUpdate = (e: any) => {
-    setOfferText(e.target.value);
-    if (e.target.value.length > 0 && e.target.value.length < 40) {
-      setOfferValid(true);
-    } else {
-      setOfferValid(false);
-    }
-  };
 
   const submitOffer = async () => {
     let activeSlideId: any = document
@@ -55,31 +31,23 @@ const LeaveOffer = (props: any) => {
   };
 
   return (
-    <div className="flex flex-col items-center mb-[98px] mt-20 relative">
-      <Poem />
+    <div className="flex flex-col items-center mb-[98px] mt-20 relative h-[380px]">
       <LeaveOfferButton
         onClick={() => {setStep('input')}}
         show={step === 'init'}
       />
-      <SpiritOffer 
-        offerSent={offerSent}
-        offerText={offerText}
-        offerImage={offerImages[offerImageId]}
-      />
       <OfferSubmitForm 
         show={step === 'input'}
-        offerSent={offerSent}
         offerText={offerText}
         onFormSubmit={submitOffer}
-        onOfferUpdate={onOfferUpdate}
         submitOffer={submitOffer}
-        offerValid={offerValid}
+        setOfferText={setOfferText}
       />
       <Share
         show={step === 'share'}
-        offerSent={offerSent}
+        offerText={offerText}
+        offerImage={offerImages[offerImageId]}
       />
-      
     </div>
   );
 };

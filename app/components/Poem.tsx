@@ -15,7 +15,7 @@ const Poem = () => {
       });
     }
   }, []);
-  
+
   return (
     <p
       className="text-[24px] lg:text-[36px] text-center mb-[80px] h-[180px]"
@@ -25,28 +25,28 @@ const Poem = () => {
         <>
           <TypeAnimation
             cursor={false}
-            sequence={["Que en Balvanera tu música siempre se oiga,"]}
+            sequence={["La vida guió tu camino,"]}
           />
           <br />
           <TypeAnimation
             cursor={false}
-            sequence={[
-              "",
-              3000,
-              "La bandera de la RIP-Gang se eleva con gloria,",
-            ]}
+            sequence={["", 3000, "La muerte tu destino,"]}
           />
           <br />
           <TypeAnimation
             cursor={false}
-            sequence={[
-              "",
-              6000,
-              "Eterno serás en cada beat y acorde que flota.",
-            ]}
+            sequence={["", 6000, "Solemne es nuestro rezo ante tu partida,"]}
           />
           <br />
-          <TypeAnimation cursor={false} sequence={["", 9000, "Con Amor,"]} />
+          <TypeAnimation
+            cursor={false}
+            sequence={["", 9000, "Que tu alma en paz descanse,"]}
+          />
+          <br />
+          <TypeAnimation
+            cursor={false}
+            sequence={["", 12000, "Esta es nuestra despedida,"]}
+          />
         </>
       )}
     </p>

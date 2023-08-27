@@ -1,13 +1,14 @@
-import Image from "next/image"
+import Image from "next/image";
 
-const LeaveOfferButton = ( props : any ) => {
-    return (
-        <div
-        onClick={props.onClick}
-        className={`transition-all opacity-0 ${
-            !props.show ? "h-0" : "opacity-100"
-        }`}
-      >
+const LeaveOfferButton = (props: any) => {
+  return (
+    <div
+      onClick={props.onClick}
+      className={`transition-all h-full absolute top-0 flex flex-col justify-center ${
+        props.show ? "opacity-100" : "opacity-0 pointer-events-none blur-lg"
+      }`}
+    >
+      <div className="">
         <div
           className={`w-[331px] h-[80px] relative transition duration-500 drop-shadow-[0px_0px_8px_transparent] hover:drop-shadow-[0px_0px_8px_white] cursor-pointer`}
           data-aos="fade-up"
@@ -20,7 +21,8 @@ const LeaveOfferButton = ( props : any ) => {
           />
         </div>
       </div>
-    )
-}
+    </div>
+  );
+};
 
 export default LeaveOfferButton;

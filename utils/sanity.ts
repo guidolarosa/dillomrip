@@ -13,7 +13,7 @@ export const client = createClient({
 
 // uses GROQ to query content: https://www.sanity.io/docs/groq
 export async function getOffers() {
-  const offers = await client.fetch('*[_type == "offer"]')
+  const offers = await client.fetch('*[_type == "offer"][0...70]')
   return offers
 }
 
