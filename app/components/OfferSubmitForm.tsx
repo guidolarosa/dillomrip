@@ -37,12 +37,13 @@ const OfferSubmitForm = (props: any) => {
             options={{
               type: "loop",
               pagination: false,
+              speed: 1000
             }}
           >
             {offerImages.map((offer, index) => (
               <SplideSlide key={index}>
                 <div className="w-full flex items-center justify-center">
-                  <div className="w-[68px] aspect-square relative">
+                  <div className="offer-image w-[68px] aspect-square relative">
                     <Image src={offer} fill alt={"Ofrenda"} />
                   </div>
                 </div>

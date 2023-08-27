@@ -22,9 +22,8 @@ export default function RootLayout({
       </head>
       <body className={`relative`}>
         <div
-          className="absolute w-[100vw] h-full z-0 bg-[url(/bkg.jpg)] lg:bg-top"
+          className="absolute w-[100vw] h-full z-0 bg-[url(/bkg.jpg)] bg-[center_top_-20rem] lg:bg-[center_top_-20rem]"
           style={{
-            backgroundPosition: "center -20rem",
             backgroundSize: "auto auto",
             backgroundAttachment: "center",
             backgroundRepeat: "no-repeat"

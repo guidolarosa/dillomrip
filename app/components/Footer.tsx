@@ -50,7 +50,6 @@ const Footer = (props: any) => {
     <footer className="flex justify-center bg-[url('/fire-footer.png')] w-full h-[380px] lg:h-[700px] pb-[32px] overflow-hidden relative flex-col items-center z-10">
       <div 
         className="absolute w-full h-full z-10"
-        data-rellax-speed="5"
       >
         <Image
           fill
@@ -61,7 +60,7 @@ const Footer = (props: any) => {
       </div>
       <div
         className="absolute w-full h-full"
-        data-rellax-speed="3"
+       
       >
         <Image
           fill
@@ -74,7 +73,7 @@ const Footer = (props: any) => {
         <div
           className="countdown font-['Editorial_New'] relative mt-auto"
           data-aos="fade-up"
-          data-aos-offset="00"
+          data-aos-offset="0"
         >
           <div className="text-[56px] lg:text-[111px] flex mt-auto">
             <span className="flex w-20 lg:w-[128px] justify-center">

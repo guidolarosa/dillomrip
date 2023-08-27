@@ -73,6 +73,7 @@ body {
 .splide .splide__arrow svg {
   display: none;
 }
+
 .splide .splide__arrow {
   background: transparent;
   border: none;
@@ -100,3 +101,19 @@ body {
   pointer-events: none;
   transition: 0.5s ease-in-out all;
 }
+
+/* .splide__slide.is-active .offer-image {
+  opacity: 1;
+  transform: scale(1)
+}
+
+.splide__slide .offer-image {
+  opacity: 0;
+  transform: scale(0.5)
+}
+
+.splide__slide .offer-image {
+  transition: 0.25s ease-in-out all;
+} */
+
+
