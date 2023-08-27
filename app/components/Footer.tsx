@@ -47,7 +47,7 @@ const Footer = (props: any) => {
   }, []);
 
   return (
-    <footer className="flex justify-center bg-[url('/fire-footer.png')] w-full h-[380px] lg:h-[700px] pb-[32px] overflow-hidden relative flex-col items-center z-10">
+    <footer className="flex justify-center bg-[url('/fire-footer.png')] w-full h-[380px] lg:h-[700px] lg:pb-[32px] overflow-hidden relative flex-col items-center z-10">
       <div 
         className="absolute w-full h-full z-10 bottom-0"
       >
@@ -75,20 +75,20 @@ const Footer = (props: any) => {
           data-aos="fade-up"
           data-aos-offset="0"
         >
-          <div className="text-[56px] lg:text-[111px] flex mt-auto">
-            <span className="flex w-20 lg:w-[128px] justify-center">
+          <div className="text-[48px] lg:text-[111px] flex mt-auto">
+            <span className="flex w-[64px] lg:w-[128px] justify-center">
               {remainingTime.days}
             </span>
             :
-            <span className="flex w-20 lg:w-[128px] justify-center">
+            <span className="flex w-[64px] lg:w-[128px] justify-center">
               {remainingTime.hours}
             </span>
             :
-            <span className="flex w-20 lg:w-[128px] justify-center">
+            <span className="flex w-[64px] lg:w-[128px] justify-center">
               {remainingTime.minutes}
             </span>
             :
-            <span className="flex w-20 lg:w-[128px] justify-center">
+            <span className="flex w-[64px] lg:w-[128px] justify-center">
               {remainingTime.seconds}
             </span>
           </div>
