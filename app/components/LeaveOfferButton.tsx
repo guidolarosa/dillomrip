@@ -8,10 +8,11 @@ const LeaveOfferButton = (props: any) => {
         props.show ? "opacity-100" : "opacity-0 pointer-events-none blur-lg"
       }`}
     >
-      <div className="">
+      <div>
         <div
           className={`w-[331px] h-[80px] relative transition duration-500 drop-shadow-[0px_0px_8px_transparent] hover:drop-shadow-[0px_0px_8px_white] cursor-pointer`}
           data-aos="fade-up"
+          data-aos-duration="2000"
         >
           <Image
             fill

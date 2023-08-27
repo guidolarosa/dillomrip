@@ -24,14 +24,14 @@ const OfferSubmitForm = (props: any) => {
       }`}
     >
       <div className="w-[320px] aspect-square mt-[42px] flex flex-col relative top-4">
-        <div className="absolute w-full h-full flex justify-center top-[-58px] pointer-events-none">
+        <div className="absolute w-full h-full flex justify-center top-[-58px] pointer-events-none z-30">
           <div
             className={`w-[116px] h-[174px] relative transition-all`}
           >
             <Image src={"/fire-selector.png"} fill alt={"Ofrenda"} />
           </div>
         </div>
-        <div>
+        <div className="relative z-0">
           <Splide
             ref={splideRef}
             options={{

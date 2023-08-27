@@ -55,19 +55,19 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: theme('colors.red.950');  
+  background: theme('colors.gray.950');  
   border-radius: 0px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: theme('colors.red.700'); 
+  background: theme('colors.gray.700'); 
   border-radius: 0px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: theme('colors.gray.200')
+  background: theme('colors.gray.500')
 }
 
 .splide .splide__arrow svg {

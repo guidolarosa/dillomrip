@@ -14,9 +14,10 @@ import LeaveOffer from "./components/LeaveOffer";
 import Poem from "./components/Poem";
 
 export default function Home() {
-  const [showCover, setShowCover] = useState(
-    process.env.NEXT_PUBLIC_ENV === "development" ? false : true
-  );
+  // const [showCover, setShowCover] = useState(
+  //   process.env.NEXT_PUBLIC_ENV === "development" ? false : true
+  // );
+  const [showCover, setShowCover] = useState(true);
 
   useEffect(() => {
     AOS.init({

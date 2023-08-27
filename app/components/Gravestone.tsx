@@ -61,7 +61,7 @@ const Gravestone = (props: any) => {
           alt="Grave"
           className={`object-contain`}
         />
-        <div className="left-candles w-[128px] aspect-square absolute bottom-[12px] left-[-30px]">
+        <div className="left-candles w-[92px] aspect-square absolute bottom-[12px] left-[-12px]">
           <div className="candles w-full h-full absolute bottom-0 left-0">
             <Image
               fill
@@ -87,7 +87,7 @@ const Gravestone = (props: any) => {
             />
           </div>
         </div>
-        <div className="right-candles w-[128px] aspect-square absolute bottom-[-24px] right-[-120px]">
+        <div className="right-candles w-[92px] aspect-square absolute bottom-[-24px] right-[-80px]">
           <div className="candles w-full h-full absolute bottom-[60px] left-[-50px]">
             <Image
               fill
