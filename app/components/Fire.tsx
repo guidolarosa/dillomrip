@@ -30,6 +30,7 @@ const Fire = (props: any) => {
           },
           move: {
             direction: "top",
+            speed: 5
           },
           size: {
             value: 2,
