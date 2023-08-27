@@ -19,6 +19,10 @@ const Cover = ( props : any ) => {
     audioRef.current = audio;
   }, []);
 
+  useEffect(() => {
+    setShowCover(gifLoaded)
+  }, [gifLoaded])
+
   return (
     <>
       <div className="fixed right-10 top-10">
@@ -44,12 +48,12 @@ const Cover = ( props : any ) => {
       </div>
       <div
         className={`w-[calc(100vw)] h-[100dvh] fixed top-0 z-50 ${
-          showCover && !gifLoaded ? "" : "pointer-events-none"
+          showCover ? "" : "pointer-events-none"
         }`}
       >
         <div
           className={`cover top-0 left-0 fixed w-full h-full bg-black z-20 transition duration-[3000ms] flex items-center justify-center ${
-            showCover && !gifLoaded
+            showCover
               ? "opacity-100"
               : "opacity-0 blur-xl pointer-events-none"
           }`}
@@ -80,6 +84,7 @@ const Cover = ( props : any ) => {
               alt="Opening"
               className="object-cover"
               onLoadingComplete={() => {
+                console.log('loaded')
                 setGifLoaded(true);
               }}
             />

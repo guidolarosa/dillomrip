@@ -7,7 +7,7 @@ const Offers = (props: any) => {
   const [offers, setOffers] = useState([]);
 
   useEffect(() => {
-    getOffers().then((data) => {
+    getOffers(60).then((data) => {
       setOffers(
         data.map((rawData: any) => ({
           ...rawData,
