@@ -24,8 +24,8 @@ export default function RootLayout({
         <div
           className="absolute w-[100vw] h-full z-0 bg-[url(/bkg.jpg)] lg:bg-top"
           style={{
-            backgroundPosition: "center -0rem",
-            backgroundSize: "100% auto",
+            backgroundPosition: "center -20rem",
+            backgroundSize: "auto auto",
             backgroundAttachment: "center",
             backgroundRepeat: "no-repeat"
           }}
