@@ -5,16 +5,13 @@ import AOS from "aos";
 import Rellax from "rellax";
 import Cover from "./../components/Cover";
 import Fog from "./../components/Fog";
-import Offers from "./../components/Offers";
-import Branches from "./../components/Branches";
-import Gravestone from "./../components/Gravestone";
-import Footer from "./../components/Footer";
-import Butterflies from "./../components/Butterflies";
-import LeaveOffer from "./../components/LeaveOffer";
-import Poem from "./../components/Poem";
+import Footer from "./../components/Footer";;
+import Fire from "../components/Fire";
+import Book from "../components/Book";
 
 export default function Home() {
   const [showCover, setShowCover] = useState(true);
+  const [showPage, setShowPage] = useState(false);
 
   useEffect(() => {
     AOS.init({
@@ -30,8 +27,16 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex min-h-screen flex-col items-center relative z-10">
-      {showCover && <Cover />}
-    </main>
+    <>
+      <main className="flex min-h-screen flex-col items-center relative z-10">
+        {showCover && <Cover setShowPage={setShowPage} />}
+        <Fog />
+        <Fire />
+        {showPage && (
+          <Book />
+        )}
+      </main>
+      <Footer />
+    </>
   );
 }

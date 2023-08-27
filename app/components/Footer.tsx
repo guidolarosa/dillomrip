@@ -49,7 +49,7 @@ const Footer = (props: any) => {
   return (
     <footer className="flex justify-center bg-[url('/fire-footer.png')] w-full h-[380px] lg:h-[700px] pb-[32px] overflow-hidden relative flex-col items-center z-10">
       <div 
-        className="absolute w-full h-full z-10"
+        className="absolute w-full h-full z-10 bottom-0"
       >
         <Image
           fill

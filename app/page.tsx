@@ -32,20 +32,22 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex min-h-screen flex-col items-center relative z-10">
-      {showCover && <Cover setShowPage={setShowPage} />}
-      <Branches />
-      <Butterflies />
-      <Fog />
-      {showPage && (
-        <>
-          <Gravestone />
-          <Offers />
-          <Poem />
-          <LeaveOffer />
-        </>
-      )}
+    <>
+      <main className="flex min-h-screen flex-col items-center relative z-10">
+        {showCover && <Cover setShowPage={setShowPage} />}
+        <Branches />
+        <Butterflies />
+        <Fog />
+        {showPage && (
+          <>
+            <Gravestone />
+            <Offers />
+            <Poem />
+            <LeaveOffer />
+          </>
+        )}
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }
