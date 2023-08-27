@@ -4,7 +4,7 @@ import RightCandles from "./RightCandles";
 
 const Book = (props: any) => {
   return (
-    <div className="book aspect-square h-[480px] md:h-[980px] relative top-[-100px] md:top-[-220px]">
+    <div className="book aspect-square h-[480px] md:h-[980px] relative top-[-100px] md:top-[-220px] animate-wiggle" style={{animationDuration: '30s'}}>
       <Image
         fill
         src="/book.png"
