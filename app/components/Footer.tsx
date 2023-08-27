@@ -47,7 +47,7 @@ const Footer = (props: any) => {
   }, []);
 
   return (
-    <footer className="flex justify-center bg-[url('/fire-footer.png')] w-full h-[380px] lg:h-[700px] lg:pb-[32px] overflow-hidden relative flex-col items-center z-10">
+    <footer className="flex justify-center bg-[url('/fire-footer.png')] w-full h-[380px] lg:h-[700px] lg:pb-[32px] overflow-hidden relative flex-col items-center z-0">
       <div 
         className="absolute w-full h-full z-10 bottom-0"
       >

@@ -37,7 +37,7 @@ export default function Home() {
           <>
             <Book />
             <div
-              className={`w-[331px] h-[80px] relative transition duration-500 drop-shadow-[0px_0px_8px_transparent] hover:drop-shadow-[0px_0px_8px_white] cursor-pointer top-[-280px]`}
+              className={`w-[331px] h-[80px] relative transition duration-500 drop-shadow-[0px_0px_8px_transparent] hover:drop-shadow-[0px_0px_8px_white] cursor-pointer top-[-120px] md:top-[-280px]`}
               data-aos="fade-up"
               data-aos-duration="2000"
             >
