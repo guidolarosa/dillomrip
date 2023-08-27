@@ -44,6 +44,14 @@ const config: Config = {
             filter: "drop-shadow(0 0 10px white)",
           },
         },
+        bookFloat: {
+          "0%, 100%": {
+            transform: "translateY(-24px)",
+          },
+          "50%": {
+            transform: "translateY(24px)",
+          },
+        },
         float: {
           "0%, 32%, 50%, 72%, 100%": {
             transform: "translateY(0px) scale(1) rotate(0)",
@@ -95,6 +103,7 @@ const config: Config = {
         fadeup: "fadeup 0.25s ease-out forwards",
         wiggle: "wiggle 5s ease-in-out infinite",
         offerfadeup: "offerfadeup 1s ease-out infinite",
+        bookFloat: "bookFloat 30s ease-in-out infinite"
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
