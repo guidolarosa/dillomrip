@@ -46,9 +46,9 @@ const Footer = (props: any) => {
   }, []);
 
   return (
-    <footer className="flex justify-center bg-[url('/fire-footer.png')] w-full h-[380px] lg:h-[700px] pb-[32px] overflow-hidden relative flex-col items-center bg-black z-10">
+    <footer className="flex justify-center bg-[url('/fire-footer.png')] w-full h-[380px] lg:h-[700px] pb-[32px] overflow-hidden relative flex-col items-center lg:bg-black z-10">
       <div 
-        className="absolute w-full h-full z-10 rellax"
+        className="absolute w-full h-full z-10 lg:bottom-[0rem] bottom-[8rem] rellax"
         data-rellax-percentage="0.5"
         data-rellax-speed="5"
       >
@@ -60,7 +60,8 @@ const Footer = (props: any) => {
         />
       </div>
       <div
-        className="absolute w-full h-full rellax"
+        className="absolute w-full h-full rellax
+        bottom-[5rem] lg:bottom-0"
         data-rellax-percentage="0.5"
         data-rellax-speed="3"
       >
