@@ -27,11 +27,11 @@ const Share = (props: any) => {
           />
         </div>
         <div className="flex justify-center mt-2">
-          <Link href="#">
-            <FaTwitter className="mx-2" size="24px"/>
+          <Link href="https://twitter.com/intent/tweet?&url=https%3A%2F%2Fwww.dillom.rip%2F&text=This%20is%20the%20text&via=sometwitterusername&hashtags=hashtag1%2Chashtag2" target="_blank">
+            <FaTwitter className="mx-2" size="32px"/>
           </Link>
           <Link href="#">
-            <FaInstagram className="mx-2" size="24px"/>
+            <FaInstagram className="mx-2" size="32px"/>
           </Link>
         </div>
       </div>
