@@ -15,6 +15,7 @@ const Cover = (props: any) => {
     const html = document.querySelector("html") as HTMLElement;
     html.style.overflowY = "hidden";
     const audio = new Audio("/audio.mp3");
+    audio.loop = true;
     audioRef.current = audio;
   }, []);
 
@@ -27,7 +28,7 @@ const Cover = (props: any) => {
             size="24px"
             onClick={() => {
               setSoundOn(false);
-              audioRef.current.pause();
+              audioRef.current.pause = true;
             }}
           />
         ) : (
@@ -65,6 +66,7 @@ const Cover = (props: any) => {
             <Image
               src="/cartita.png"
               fill
+              unoptimized
               alt="DillomRIP"
               className="object-contain"
             />
