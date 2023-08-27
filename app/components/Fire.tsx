@@ -26,7 +26,7 @@ const Fire = (props: any) => {
             value: 1000,
           },
           color: {
-            value: ["#f55e2c", "#eddb18", "#ed1818"],
+            value: ["#f55e2c", "#871616"],
           },
           move: {
             direction: "top",

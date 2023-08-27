@@ -2,6 +2,7 @@ import Image from "next/image";
 import RIPOffer from "./RIPOffer";
 import { useEffect, useState, useRef } from "react";
 import LeftCandles from "./LeftCandles";
+import LeftCandlesGroup from "./LeftCandlesGroup";
 import RightCandles from "./RightCandles";
 import { ripOffers } from "@/content/ripOffers";
 
@@ -32,6 +33,7 @@ const Gravestone = (props: any) => {
           className={`object-contain`}
         />
         <LeftCandles />
+        <LeftCandlesGroup />
         <RightCandles />
         {ripOffers.map((offer: any, index: any) => (
           <RIPOffer

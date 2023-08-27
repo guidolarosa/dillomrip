@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const LeftCandles = (props: any) => {
   return (
-    <div className="left-candles w-[92px] aspect-square absolute bottom-[12px] left-[-12px] scale-75">
+    <div className="left-candles w-[92px] aspect-square absolute bottom-[0px] left-[-160px] scale-75 blur-[1px]">
       <div className="candles w-full h-full absolute bottom-0 left-0">
         <Image
           fill
