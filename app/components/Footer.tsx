@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import moment from "moment";
 import Image from "next/image";
 import Link from "next/link";
+import Fire from "./Fire";
 
 const Footer = (props: any) => {
   const [remainingTime, setRemainingTime]: any = useState({
@@ -46,10 +47,9 @@ const Footer = (props: any) => {
   }, []);
 
   return (
-    <footer className="flex justify-center bg-[url('/fire-footer.png')] w-full h-[380px] lg:h-[700px] pb-[32px] overflow-hidden relative flex-col items-center lg:bg-black z-10">
+    <footer className="flex justify-center bg-[url('/fire-footer.png')] w-full h-[380px] lg:h-[700px] pb-[32px] overflow-hidden relative flex-col items-center z-10">
       <div 
-        className="absolute w-full h-full z-10 lg:bottom-[0rem] bottom-[8rem] rellax"
-        data-rellax-percentage="0.5"
+        className="absolute w-full h-full z-10"
         data-rellax-speed="5"
       >
         <Image
@@ -60,9 +60,7 @@ const Footer = (props: any) => {
         />
       </div>
       <div
-        className="absolute w-full h-full rellax
-        bottom-[5rem] lg:bottom-0"
-        data-rellax-percentage="0.5"
+        className="absolute w-full h-full"
         data-rellax-speed="3"
       >
         <Image

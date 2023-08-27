@@ -12,7 +12,7 @@ const Offers = (props: any) => {
         data.map((rawData: any) => ({
           ...rawData,
           left: getRandomArbitrary(15, 85),
-          top: getRandomArbitrary(10, 80),
+          top: getRandomArbitrary(10, 70),
         }))
       );
     });

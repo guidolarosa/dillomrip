@@ -53,7 +53,7 @@ const OfferSubmitForm = (props: any) => {
         <input
           value={props.offerText}
           placeholder="Dejá tu ofrenda..."
-          className={`mt-20 bg-transparent border-b text-center text-[32px] mb-8 outline-none transition-all`}
+          className={`mt-20 bg-transparent border-b text-center text-[32px] mb-8 outline-none transition-all placeholder:opacity-50`}
           onChange={onOfferUpdate}
         />
         <div

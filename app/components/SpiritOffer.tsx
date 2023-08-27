@@ -13,24 +13,31 @@ const SpiritOffer = (props: any) => {
   }, [props.show]);
 
   return (
-    <div
-      className={`spirit-offer grayscale w-[68px] aspect-square absolute transition-all left-[calc(50%-34px)] duration-[3000ms]`}
-      style={{
-        top: `${offerAnimated ? -580 : 0}px`,
-        filter: `${offerAnimated ? 'grayscale(0)' : 'grayscale(1)'}`,
-      }}
-    >
-      <Image src={props.offerImage} fill alt={"Ofrenda"} />
+    <>
       <div
-        className={
-          "absolute w-full h-[24px] bottom-[-25px] flex justify-center"
-        }
+        className={`spirit-offer grayscale w-[68px] aspect-square absolute transition-all left-[calc(50%-34px)] duration-[3000ms]`}
+        style={{
+          top: `${offerAnimated ? -580 : 0}px`,
+          filter: `${offerAnimated ? "grayscale(0)" : "grayscale(1)"}`,
+        }}
       >
-        <div className="whitespace-nowrap text-center text-[18px] text-gray-400 absolute group-hover:text-white filter drop-shadow-[0px_0px_8px_black]">
-          {props.offerText}
+        <Image src={props.offerImage} fill alt={"Ofrenda"} />
+        <div
+          className={
+            "absolute w-full h-[24px] bottom-[-25px] flex justify-center"
+          }
+        >
+          <div className="whitespace-nowrap text-center text-[18px] text-gray-400 absolute group-hover:text-white filter drop-shadow-[0px_0px_8px_black]">
+            {props.offerText}
+          </div>
         </div>
       </div>
-    </div>
+      <div
+        className={`spirit-offer w-[68px] aspect-square absolute transition-all left-[calc(50%-34px)] duration-[3000ms] top-0`}
+      >
+        <Image src={props.offerImage} fill alt={"Ofrenda"} />
+      </div>
+    </>
   );
 };
 
