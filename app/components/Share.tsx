@@ -31,7 +31,7 @@ const Share = (props: any) => {
           <Link href="https://twitter.com/intent/tweet?&url=https%3A%2F%2Fwww.dillom.rip%2F&text=Que%20tu%20alma%20en%20paz%20descanse,%20esta%20es%20nuestra%20despedida" target="_blank">
             <FaTwitter className="mx-2" size="32px"/>
           </Link>
-          <Link href="#">
+          <Link download href="/share.jpeg" className="block md:hidden">
             <FaInstagram className="mx-2" size="32px"/>
           </Link>
         </div>
