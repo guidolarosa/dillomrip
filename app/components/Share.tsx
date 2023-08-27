@@ -27,7 +27,8 @@ const Share = (props: any) => {
           />
         </div>
         <div className="flex justify-center mt-2">
-          <Link href="https://twitter.com/intent/tweet?&url=https%3A%2F%2Fwww.dillom.rip%2F&text=This%20is%20the%20text&via=sometwitterusername&hashtags=hashtag1%2Chashtag2" target="_blank">
+          {/* <Link href="https://twitter.com/intent/tweet?&url=https%3A%2F%2Fwww.dillom.rip%2F&text=Que%20tu%20alma%20en%20paz%20descanse,%20esta%20es%20nuestra%20despedida&via=sometwitterusername&hashtags=hashtag1%2Chashtag2" target="_blank"> */}
+          <Link href="https://twitter.com/intent/tweet?&url=https%3A%2F%2Fwww.dillom.rip%2F&text=Que%20tu%20alma%20en%20paz%20descanse,%20esta%20es%20nuestra%20despedida" target="_blank">
             <FaTwitter className="mx-2" size="32px"/>
           </Link>
           <Link href="#">
