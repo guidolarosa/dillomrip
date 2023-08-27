@@ -8,7 +8,7 @@ import Share from "./Share";
 import LeaveOfferButton from "./LeaveOfferButton";
 
 const SubmitOffer = (props: any) => {
-  const [step, setStep] = useState('share')
+  const [step, setStep] = useState('init')
   const [offerText, setOfferText] = useState("");
   const [offerImageId, setOfferImageId] = useState(0);
 

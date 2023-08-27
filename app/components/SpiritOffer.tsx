@@ -62,13 +62,13 @@ const SpiritOffer = (props: any) => {
   const handleShadowStyle = (step : number) => {
     switch (animationStep) {
       case 0:
-        setShadow(`drop-shadow(0 0 0 transparent)`);
+        setShadow('drop-shadow(0 0 0 transparent)');
         break;
       case 1:
-        setShadow(`drop-shadow(0 0 5px white)`);
+        setShadow('drop-shadow(0 0 5px white)');
         break;
       case 2:
-        setShadow(`drop-shadow(0 0 0 transparent)`);
+        setShadow('drop-shadow(0 0 0 transparent)');
     }
   };
 
@@ -87,7 +87,7 @@ const SpiritOffer = (props: any) => {
           top: `${top}px`,
           filter: `${color}`,
           transform: `${transform}`,
-          filter: `${shadow}`,
+          WebkitFilter: shadow,
         }}
       >
         <Image src={props.offerImage} fill alt={"Ofrenda"} />
