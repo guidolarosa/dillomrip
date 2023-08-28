@@ -25,7 +25,7 @@ const Offers = (props: any) => {
     <div className="offers-container h-[220px] lg:h-[320px] w-full relative">
       {offers.map((offer: any, index: number) => (
         <>
-          {window.innerWidth >= 768 ? (
+          {window.innerWidth <= 768 ? (
             index < 40 && (
               <Offer
                 key={index}
