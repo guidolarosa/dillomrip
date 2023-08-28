@@ -24,7 +24,7 @@ export const ripOffers = [
       },
     },
     {
-      name: "@lil quentin",
+      name: "@ill quentin",
       image: "/rip-offers/ofrenda ripgang-1.png",
       position: {
         bottom: -19,

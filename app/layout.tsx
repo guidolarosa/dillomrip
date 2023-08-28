@@ -70,7 +70,7 @@ export default function RootLayout({
         <meta property="title" content="Home - Dillom" />
         <meta
           property="description"
-          content="@odd mami @Muerejoven @k4 @lil quentin @Broke Carrey @Saramalacara La vida guió tu camino, La muerte tu destino, Solemne es nuestro rezo ante tu partida, Que tu alma en paz descanse, Esta es nuestra despedida. : 00 : 00 : 00"
+          content="@odd mami @Muerejoven @k4 @ill quentin @Broke Carrey @Saramalacara La vida guió tu camino, La muerte tu destino, Solemne es nuestro rezo ante tu partida, Que tu alma en paz descanse, Esta es nuestra despedida. : 00 : 00 : 00"
         />
         <meta property="url" content="https://www.dillom.rip/" />
 
@@ -79,7 +79,7 @@ export default function RootLayout({
         <meta property="og:title" content="Home - Dillom" />
         <meta
           property="og:description"
-          content="@odd mami @Muerejoven @k4 @lil quentin @Broke Carrey @Saramalacara La vida guió tu camino, La muerte tu destino, Solemne es nuestro rezo ante tu partida, Que tu alma en paz descanse, Esta es nuestra despedida. : 00 : 00 : 00"
+          content="@odd mami @Muerejoven @k4 @ill quentin @Broke Carrey @Saramalacara La vida guió tu camino, La muerte tu destino, Solemne es nuestro rezo ante tu partida, Que tu alma en paz descanse, Esta es nuestra despedida. : 00 : 00 : 00"
         />
         <meta property="og:url" content="https://www.dillom.rip/" />
         <meta property="og:site_name" content="Dillom" />
@@ -108,7 +108,7 @@ export default function RootLayout({
         <meta name="twitter:title" content="Home - Dillom" />
         <meta
           name="twitter:description"
-          content="@odd mami @Muerejoven @k4 @lil quentin @Broke Carrey @Saramalacara La vida guió tu camino, La muerte tu destino, Solemne es nuestro rezo ante tu partida, Que tu alma en paz descanse, Esta es nuestra despedida. : 00 : 00 : 00"
+          content="@odd mami @Muerejoven @k4 @ill quentin @Broke Carrey @Saramalacara La vida guió tu camino, La muerte tu destino, Solemne es nuestro rezo ante tu partida, Que tu alma en paz descanse, Esta es nuestra despedida. : 00 : 00 : 00"
         />
         <meta
           name="twitter:image"
