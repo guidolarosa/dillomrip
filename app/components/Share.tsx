@@ -16,16 +16,18 @@ const Share = (props: any) => {
         offerImage={props.offerImage}
       />
       <div className="w-[320px] aspect-square relative top-4 flex flex-col justify-center items-center">
-        <div
-          className={`w-[180px] h-[62px] lg:w-[331px] lg:h-[80px] relative transition duration-500 drop-shadow-[0px_0px_8px_transparent]`}
-        >
-          <Image
-            fill
-            src="/compartir.svg"
-            alt="Grave"
-            className="object-contain"
-          />
-        </div>
+        <Link href="https://twitter.com/intent/tweet?&url=https%3A%2F%2Fwww.dillom.rip%2F&text=Que%20tu%20alma%20en%20paz%20descanse,%20esta%20es%20nuestra%20despedida" target="_blank">
+          <div
+            className={`w-[180px] h-[62px] lg:w-[331px] lg:h-[80px] relative transition duration-500 pointer-events-none drop-shadow-[0px_0px_8px_transparent] md:hover:drop-shadow-[white] md:pointer-events-auto`}
+          >
+            <Image
+              fill
+              src="/compartir.svg"
+              alt="Grave"
+              className="object-contain"
+            />
+          </div>
+        </Link>
         <div className="flex justify-center mt-2">
           {/* <Link href="https://twitter.com/intent/tweet?&url=https%3A%2F%2Fwww.dillom.rip%2F&text=Que%20tu%20alma%20en%20paz%20descanse,%20esta%20es%20nuestra%20despedida&via=sometwitterusername&hashtags=hashtag1%2Chashtag2" target="_blank"> */}
           <Link href="https://twitter.com/intent/tweet?&url=https%3A%2F%2Fwww.dillom.rip%2F&text=Que%20tu%20alma%20en%20paz%20descanse,%20esta%20es%20nuestra%20despedida" target="_blank">
