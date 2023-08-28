@@ -1,50 +1,86 @@
 export const ripOffers = [
-    {
-      name: "@ odd mami",
-      position: {
+  {
+    name: "@ odd mami",
+    position: {
+      desktop: {
         bottom: -25,
-        left: -2
+        left: -2,
       },
-      image: "/rip-offers/ofrenda ripgang-6.png",
+      mobile: {
+        bottom: -30,
+        left: 8,
+      },
     },
-    {
-      name: "@Muerejoven",
-      position: {
+    image: "/rip-offers/ofrenda ripgang-6.png",
+  },
+  {
+    name: "@Muerejoven",
+    position: {
+      desktop: {
         bottom: -15,
-        left: 17
+        left: 17,
       },
-      image: "/rip-offers/ofrenda ripgang-4.png",
+      mobile: {
+        bottom: -20,
+        left: 23,
+      },
     },
-    {
-      name: "@k4",
-      image: "/rip-offers/ofrenda ripgang-3.png",
-      position: {
+    image: "/rip-offers/ofrenda ripgang-4.png",
+  },
+  {
+    name: "@k4",
+    image: "/rip-offers/ofrenda ripgang-3.png",
+    position: {
+      desktop: {
         bottom: -22,
-        left: 36
+        left: 36,
+      },
+      mobile: {
+        bottom: -25,
+        left: 38,
       },
     },
-    {
-      name: "@ill quentin",
-      image: "/rip-offers/ofrenda ripgang-1.png",
-      position: {
+  },
+  {
+    name: "@ill quentin",
+    image: "/rip-offers/ofrenda ripgang-1.png",
+    position: {
+      desktop: {
         bottom: -19,
-        left: 51
+        left: 51,
+      },
+      mobile: {
+        bottom: -10,
+        left: 51,
       },
     },
-    {
-      name: "@Broke Carrey",
-      image: "/rip-offers/ofrenda ripgang-2.png",
-      position: {
+  },
+  {
+    name: "@Broke Carrey",
+    image: "/rip-offers/ofrenda ripgang-2.png",
+    position: {
+      desktop: {
         bottom: -24,
-        left: 68
+        left: 68,
+      },
+      mobile: {
+        bottom: -25,
+        left: 60,
       },
     },
-    {
-      name: "@Saramalacara",
-      image: "/rip-offers/ofrenda ripgang-5.png",
-      position: {
+  },
+  {
+    name: "@Saramalacara",
+    image: "/rip-offers/ofrenda ripgang-5.png",
+    position: {
+      desktop: {
         bottom: -15,
-        left: 82
+        left: 82,
+      },
+      mobile: {
+        bottom: -15,
+        left: 70,
       },
     },
-  ];
+  },
+];

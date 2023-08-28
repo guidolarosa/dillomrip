@@ -2,7 +2,6 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 
 const SpiritOffer = (props: any) => {
-  const [offerAnimated, setOfferAnimated] = useState(false);
   const [animationStep, setAnimationStep] = useState(0);
   const [top, setTop] = useState(0);
   const [color, setColor] = useState("grayscale(100%) drop-shadow(0 0 0 transparent)");
