@@ -85,7 +85,6 @@ const Cover = ( props : any ) => {
               alt="Opening"
               className="object-cover"
               onLoadingComplete={() => {
-                console.log('loaded');
                 setTimeout(() => {
                   setGifLoaded(true);
                 }, 500)

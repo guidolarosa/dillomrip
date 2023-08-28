@@ -11,7 +11,6 @@ const Fire = (props: any) => {
   const particlesLoaded = useCallback(async (container: any) => {
     await console.log(container);
     let el: any = document.querySelector("#tsparticles canvas");
-    console.log(el);
     el.setAttribute("height", "300px");
   }, []);
 

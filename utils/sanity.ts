@@ -20,12 +20,17 @@ export async function getOffers(quantity : number) {
 export async function createOffer(offer : any) {
   const result = client.create({
     _type: 'offer',
-    imageId: offer.imageId,
+    imageId: parseInt(offer.imageId),
     text: offer.text
   });
   return result
 }
 
-// export async function clearOffers() {
-//   const result = client.mutate)
-// }
+export async function clearOffers() {
+  try {
+    const result = await client.delete({query: '*[_type == "offer"][0...999]'});
+    console.log(result)
+  } catch (err) {
+    console.log(err)
+  }
+}
