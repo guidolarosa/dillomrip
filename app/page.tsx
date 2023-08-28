@@ -15,7 +15,7 @@ import Poem from "./components/Poem";
 
 export default function Home() {
   const [showCover, setShowCover] = useState(true);
-  const [showPage, setShowPage] = useState(true);
+  const [showPage, setShowPage] = useState(false);
 
   useEffect(() => {
     AOS.init({
