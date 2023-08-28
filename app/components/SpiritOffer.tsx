@@ -39,13 +39,13 @@ const SpiritOffer = (props: any) => {
   const handleTransformStyle = (step: number) => {
     switch (animationStep) {
       case 0:
-        setTransform(`scale(1)`);
-        break;
-      case 1:
         setTransform(`scale(1.5)`);
         break;
+      case 1:
+        setTransform(`scale(2)`);
+        break;
       case 2:
-        setTransform(`scale(1)`);
+        setTransform(`scale(1.5)`);
     }
   };
 
@@ -71,7 +71,7 @@ const SpiritOffer = (props: any) => {
   return (
     <>
       <div
-        className={`spirit-offer grayscale w-[68px] aspect-square absolute transition-all left-[calc(50%-34px)] z-100 duration-[3000ms]`}
+        className={`spirit-offer grayscale w-[68px] aspect-square absolute transition-all left-[calc(50%-34px)] duration-[3000ms] scale-150`}
         style={{
           top: `${top}px`,
           filter: `${color}`,
@@ -91,7 +91,7 @@ const SpiritOffer = (props: any) => {
         </div>
       </div>
       <div
-        className={`spirit-offer w-[68px] aspect-square absolute transition-all left-[calc(50%-34px)] duration-[3000ms] top-0`}
+        className={`spirit-offer w-[68px] aspect-square absolute transition-all left-[calc(50%-34px)] duration-[3000ms] top-0 scale-150`}
       >
         <Image src={props.offerImage} fill alt={"Ofrenda"} />
         <div
