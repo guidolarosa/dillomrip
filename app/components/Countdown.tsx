@@ -12,11 +12,12 @@ const Countdown = () => {
   useEffect(() => {
     const countdownTimer = setInterval(() => {
       const now = moment(new Date());
-      const expiration = moment("2023-08-29T19:00:00-0003");
+      const expiration = moment("2023-08-29T22:00:00-0000");
 
       const diff = expiration.diff(now);
       const diffDuration = moment.duration(diff);
 
+      console.log(diffDuration)
       setRemainingTime({
         days:
           diffDuration.days() < 10
