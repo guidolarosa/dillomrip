@@ -12,7 +12,7 @@ import Footer from "./components/Footer";
 import Butterflies from "./components/Butterflies";
 import SubmitOffer from "./components/SubmitOffer";
 import Poem from "./components/Poem";
-import { clearOffers } from "@/utils/sanity";
+import { clearOffers, findDuplicates } from "@/utils/sanity";
 
 export default function Home() {
   const [showCover, setShowCover] = useState(true);
@@ -31,6 +31,7 @@ export default function Home() {
     });
 
     // clearOffers();
+    // findDuplicates()
   }, []);
 
   return (

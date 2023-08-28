@@ -6,6 +6,7 @@ import { offerImages } from "../../content/offerImages";
 const OfferSubmitForm = (props: any) => {
   const splideRef: any = useRef(null);
 
+  const [sendOfferClicked, setSendOfferClicked] = useState(false);
   const [offerValid, setOfferValid] = useState(false);
 
   const onOfferUpdate = (e: any) => {
@@ -30,7 +31,9 @@ const OfferSubmitForm = (props: any) => {
     >
       <div className="w-[320px] aspect-square mt-[42px] flex flex-col relative top-4 items-center">
         <div className="absolute w-full h-full flex justify-center top-[-16px] lg:top-[-58px] pointer-events-none z-30">
-          <div className={`w-[68px] h-[101px] lg:scale-[0.9] lg:w-[116px] lg:h-[174px] relative transition-all`}>
+          <div
+            className={`w-[68px] h-[101px] lg:scale-[0.9] lg:w-[116px] lg:h-[174px] relative transition-all`}
+          >
             <Image src={"/fire-selector.png"} fill alt={"Ofrenda"} />
           </div>
         </div>
@@ -63,8 +66,13 @@ const OfferSubmitForm = (props: any) => {
         <div
           className={`w-[180px] h-[62px] lg:w-[331px] lg:h-[80px] relative transition duration-500 drop-shadow-[0px_0px_8px_transparent] hover:drop-shadow-[0px_0px_8px_white] cursor-pointer ${
             offerValid ? "opacity-100" : "opacity-50 pointer-events-none"
+          } ${
+            sendOfferClicked ? "opacity-50 pointer-events-none" : "opacity-100"
           }`}
-          onClick={props.submitOffer}
+          onClick={() => {
+            setSendOfferClicked(true);
+            props.submitOffer();
+          }}
         >
           <Image
             fill

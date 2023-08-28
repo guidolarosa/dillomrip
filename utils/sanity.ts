@@ -34,3 +34,14 @@ export async function clearOffers() {
     console.log(err)
   }
 }
+
+export async function findDuplicates() {
+  try {
+    const result = await client.fetch(`[_type == "offer"] {
+      "duplicates": *[_type == "offer" && @[text] == ^[text] && _id != ^._id && !(_id in path('drafts.**'))] {_id, text: @[text]}
+    }[count(duplicates) > 0]]`);
+    console.log(result)
+  } catch (err) {
+    console.log(err)
+  }
+}
