@@ -8,7 +8,7 @@ import Header from "./components/Header";
 
 export const metadata: Metadata = {
   title: "DILLOM.RIP ",
-  description: "La vida guió tu camino, La muerte tu destino, Solemne es nuestro rezo ante tu partida, Que tu alma en paz descanse, Esta es nuestra despedida.",
+  description: "Que tu alma en paz descanse. Esta es nuestra despedida.",
   authors: [{ name: 'Guido La Rosa', url: 'https://coyoteweb.studio' }],
   robots: {
     index: true,
@@ -27,23 +27,23 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: "DILLOM.RIP ",
-    description: "La vida guió tu camino, La muerte tu destino, Solemne es nuestro rezo ante tu partida, Que tu alma en paz descanse, Esta es nuestra despedida.",
+    description: "Que tu alma en paz descanse. Esta es nuestra despedida.",
     creator: '@dillom',
-    images: ['https://i.ibb.co/2gf8cyL/share.jpg'],
+    images: ['https://i.ibb.co/2dCNPBs/thumb.png'],
   },
   openGraph: {
     title: "DILLOM.RIP ",
     url: 'https://dillom.rip',
     type: 'website',
-    description: 'La vida guió tu camino, La muerte tu destino, Solemne es nuestro rezo ante tu partida, Que tu alma en paz descanse, Esta es nuestra despedida.',
+    description: 'Que tu alma en paz descanse. Esta es nuestra despedida.',
     images: [
       {
-        url: 'https://i.ibb.co/2gf8cyL/share.jpg',
+        url: 'https://i.ibb.co/2dCNPBs/thumb.png',
         width: 800,
         height: 600,
       },
       {
-        url: 'https://i.ibb.co/2gf8cyL/share.jpg',
+        url: 'https://i.ibb.co/2dCNPBs/thumb.png',
         width: 1800,
         height: 1600,
         alt: 'Share',
