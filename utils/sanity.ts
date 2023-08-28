@@ -25,3 +25,7 @@ export async function createOffer(offer : any) {
   });
   return result
 }
+
+// export async function clearOffers() {
+//   const result = client.mutate)
+// }
