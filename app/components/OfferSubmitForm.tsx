@@ -9,8 +9,11 @@ const OfferSubmitForm = (props: any) => {
   const [offerValid, setOfferValid] = useState(false);
 
   const onOfferUpdate = (e: any) => {
-    props.setOfferText(e.target.value);
-    if (e.target.value.length > 0 && e.target.value.length < 35) {
+    if (e.target.value.length < 35) {
+      props.setOfferText(e.target.value);
+    }
+
+    if (e.target.value.length > 0) {
       setOfferValid(true);
     } else {
       setOfferValid(false);

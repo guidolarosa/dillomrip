@@ -17,7 +17,6 @@ const Countdown = () => {
       const diff = expiration.diff(now);
       const diffDuration = moment.duration(diff);
 
-      console.log(diffDuration)
       setRemainingTime({
         days:
           diffDuration.days() < 10
