@@ -5,15 +5,18 @@ const SpiritOffer = (props: any) => {
   const [offerAnimated, setOfferAnimated] = useState(false);
   const [animationStep, setAnimationStep] = useState(0);
   const [top, setTop] = useState(0);
-  const [color, setColor] = useState("grayscale(1)");
+  const [color, setColor] = useState("grayscale(100%) drop-shadow(0 0 0 transparent)");
   const [transform, setTransform] = useState("scale(1)");
-  const [shadow, setShadow] = useState("drop-shadow(0 0 0 transparent)");
 
   useEffect(() => {
     if (props.show) {
       setTimeout(() => {
         setAnimationStep(1);
       }, 2000);
+      setTimeout(() => {
+        const gravestone = document.querySelector('.gravestone');
+        gravestone?.scrollIntoView({behavior: 'smooth'});
+      }, 3500)
       setTimeout(() => {
         setAnimationStep(2);
       }, 5000);
@@ -49,26 +52,13 @@ const SpiritOffer = (props: any) => {
   const handleColorStyle = (step: number) => {
     switch (animationStep) {
       case 0:
-        setColor(`grayscale(100%)`);
+        setColor(`grayscale(100%) drop-shadow(0 0 0 transparent)`);
         break;
       case 1:
-        setColor(`grayscale(0)`);
+        setColor(`grayscale(0) drop-shadow(0 0 5px white)`);
         break;
       case 2:
-        setColor(`grayscale(0)`);
-    }
-  };
-
-  const handleShadowStyle = (step : number) => {
-    switch (animationStep) {
-      case 0:
-        setShadow('drop-shadow(0 0 0 transparent)');
-        break;
-      case 1:
-        setShadow('drop-shadow(0 0 5px white)');
-        break;
-      case 2:
-        setShadow('drop-shadow(0 0 0 transparent)');
+        setColor(`grayscale(0) drop-shadow(0 0 0 transparent)`);
     }
   };
 
@@ -76,7 +66,6 @@ const SpiritOffer = (props: any) => {
     handleTopStyle(animationStep);
     handleColorStyle(animationStep);
     handleTransformStyle(animationStep);
-    handleShadowStyle(animationStep);
   }, [animationStep]);
 
   return (

@@ -23,7 +23,7 @@ const SubmitOffer = (props: any) => {
         imageId: imageId,
         text: offerText,
       });
-      setStep('share')
+      setStep('share');
       console.log(response);
     } catch (err) {
       console.log(err);
