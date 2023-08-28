@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: "Dillom.RIP",
     description: "La vida guió tu camino, La muerte tu destino, Solemne es nuestro rezo ante tu partida, Que tu alma en paz descanse, Esta es nuestra despedida.",
     creator: '@dillom',
-    images: ['https://www.dillom.rip/wp-content/uploads/2023/08/share.jpg'],
+    images: ['https://i.ibb.co/2gf8cyL/share.jpg'],
   },
   openGraph: {
     title: "Dillom.RIP",
@@ -38,15 +38,15 @@ export const metadata: Metadata = {
     description: 'La vida guió tu camino, La muerte tu destino, Solemne es nuestro rezo ante tu partida, Que tu alma en paz descanse, Esta es nuestra despedida.',
     images: [
       {
-        url: 'https://www.dillom.rip/wp-content/uploads/2023/08/share.jpg',
+        url: 'https://i.ibb.co/2gf8cyL/share.jpg',
         width: 800,
         height: 600,
       },
       {
-        url: 'https://www.dillom.rip/wp-content/uploads/2023/08/share.jpg',
+        url: 'https://i.ibb.co/2gf8cyL/share.jpg',
         width: 1800,
         height: 1600,
-        alt: 'My custom alt',
+        alt: 'Share',
       },
     ],
   }
@@ -65,7 +65,7 @@ export default function RootLayout({
         <meta name="robots" content="nofollow, noindex" />
         <meta
           name="image"
-          content="https://www.dillom.rip/wp-content/uploads/2023/08/share.jpg"
+          content="https://i.ibb.co/2gf8cyL/share.jpg"
         />
         <meta property="title" content="Home - Dillom" />
         <meta
@@ -86,11 +86,11 @@ export default function RootLayout({
         <meta property="og:updated_time" content="2023-08-27T18:18:34+00:00" />
         <meta
           property="og:image"
-          content="https://www.dillom.rip/wp-content/uploads/2023/08/share.jpg"
+          content="https://i.ibb.co/2gf8cyL/share.jpg"
         />
         <meta
           property="og:image:secure_url"
-          content="https://www.dillom.rip/wp-content/uploads/2023/08/share.jpg"
+          content="https://i.ibb.co/2gf8cyL/share.jpg"
         />
         <meta property="og:image:width" content="1013" />
         <meta property="og:image:height" content="1800" />
@@ -112,7 +112,7 @@ export default function RootLayout({
         />
         <meta
           name="twitter:image"
-          content="https://www.dillom.rip/wp-content/uploads/2023/08/share.jpg"
+          content="https://i.ibb.co/2gf8cyL/share.jpg"
         />
         <meta name="twitter:label1" content="Written by" />
         <meta name="twitter:data1" content="damianriva" />
