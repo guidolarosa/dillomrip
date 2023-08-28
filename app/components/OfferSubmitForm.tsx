@@ -27,7 +27,7 @@ const OfferSubmitForm = (props: any) => {
     >
       <div className="w-[320px] aspect-square mt-[42px] flex flex-col relative top-4 items-center">
         <div className="absolute w-full h-full flex justify-center top-[-16px] lg:top-[-58px] pointer-events-none z-30">
-          <div className={`w-[68px] h-[101px] lg:w-[116px] lg:h-[174px] relative transition-all`}>
+          <div className={`w-[68px] h-[101px] lg:scale-[0.9] lg:w-[116px] lg:h-[174px] relative transition-all`}>
             <Image src={"/fire-selector.png"} fill alt={"Ofrenda"} />
           </div>
         </div>

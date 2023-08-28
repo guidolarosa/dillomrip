@@ -8,7 +8,7 @@ import Share from "./Share";
 import LeaveOfferButton from "./LeaveOfferButton";
 
 const SubmitOffer = (props: any) => {
-  const [step, setStep] = useState('init')
+  const [step, setStep] = useState('share')
   const [offerText, setOfferText] = useState("");
   const [offerImageId, setOfferImageId] = useState(0);
 
@@ -31,7 +31,7 @@ const SubmitOffer = (props: any) => {
   };
 
   return (
-    <div className="flex flex-col items-center mb-[42px] lg:mb-[98px] mt-0 lg:mt-20 relative h-[280px] lg:h-[380px]">
+    <div className="flex flex-col items-center mb-[42px] lg:mb-[98px] mt-0 lg:mt-10 relative h-[280px] lg:h-[380px]">
       <LeaveOfferButton
         onClick={() => {setStep('input')}}
         show={step === 'init'}
