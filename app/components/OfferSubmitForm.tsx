@@ -10,7 +10,7 @@ const OfferSubmitForm = (props: any) => {
 
   const onOfferUpdate = (e: any) => {
     props.setOfferText(e.target.value);
-    if (e.target.value.length > 0 && e.target.value.length < 40) {
+    if (e.target.value.length > 0 && e.target.value.length < 35) {
       setOfferValid(true);
     } else {
       setOfferValid(false);
@@ -53,7 +53,7 @@ const OfferSubmitForm = (props: any) => {
         </div>
         <input
           value={props.offerText}
-          placeholder="Dejá tu ofrenda..."
+          placeholder="Dejá tu mensaje..."
           className={`mt-20 bg-transparent border-b text-center text-[32px] mb-8 outline-none transition-all placeholder:opacity-50 rounded-none`}
           onChange={onOfferUpdate}
         />
