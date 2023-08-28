@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: "DILLOM.RIP ",
     description: "Que tu alma en paz descanse. Esta es nuestra despedida.",
     creator: '@dillom',
-    images: ['https://i.ibb.co/2dCNPBs/thumb.png'],
+    images: ['https://i.ibb.co/5BJnvtx/thumb.png'],
   },
   openGraph: {
     title: "DILLOM.RIP ",
@@ -38,15 +38,9 @@ export const metadata: Metadata = {
     description: 'Que tu alma en paz descanse. Esta es nuestra despedida.',
     images: [
       {
-        url: 'https://i.ibb.co/2dCNPBs/thumb.png',
+        url: 'https://i.ibb.co/5BJnvtx/thumb.png',
         width: 800,
         height: 600,
-      },
-      {
-        url: 'https://i.ibb.co/2dCNPBs/thumb.png',
-        width: 1800,
-        height: 1600,
-        alt: 'Share',
       },
     ],
   }
