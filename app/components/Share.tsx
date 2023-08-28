@@ -15,9 +15,9 @@ const Share = (props: any) => {
         offerText={props.offerText}
         offerImage={props.offerImage}
       />
-      <div className="w-[320px] aspect-square relative top-4 flex flex-col justify-center">
+      <div className="w-[320px] aspect-square relative top-4 flex flex-col justify-center items-center">
         <div
-          className={`w-[331px] h-[80px] relative transition duration-500 drop-shadow-[0px_0px_8px_transparent] `}
+          className={`w-[180px] h-[62px] lg:w-[331px] lg:h-[80px] relative transition duration-500 drop-shadow-[0px_0px_8px_transparent]`}
         >
           <Image
             fill

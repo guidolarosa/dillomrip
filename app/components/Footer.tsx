@@ -47,10 +47,8 @@ const Footer = (props: any) => {
   }, []);
 
   return (
-    <footer className="flex justify-center bg-[url('/fire-footer.png')] w-full h-[380px] lg:h-[700px] lg:pb-[32px] overflow-hidden relative flex-col items-center z-0">
-      <div 
-        className="absolute w-full h-full z-10 bottom-0"
-      >
+    <footer className="flex justify-center bg-[url('/fire-footer.png')] w-full h-[280px] lg:h-[700px] lg:pb-[32px] overflow-hidden relative flex-col items-center z-0">
+      <div className="absolute w-full h-full z-10 bottom-10 lg:bottom-0">
         <Image
           fill
           src="/fire-footer.png"
@@ -58,10 +56,7 @@ const Footer = (props: any) => {
           className="object-top object-cover"
         />
       </div>
-      <div
-        className="absolute w-full h-full"
-       
-      >
+      <div className="bottom-10 lg:bottom-0 absolute w-full h-full">
         <Image
           fill
           src="/branch-footer.png"
@@ -94,9 +89,7 @@ const Footer = (props: any) => {
           </div>
         </div>
       </div>
-      <div
-        className="relative w-[96px] h-[60px] z-50 drop-shadow-[0px_0px_8px_transparent] hover:drop-shadow-[0px_0px_8px_white] cursor-pointer"
-      >
+      <div className="relative w-[96px] h-[60px] z-50 drop-shadow-[0px_0px_8px_transparent] hover:drop-shadow-[0px_0px_8px_white] cursor-pointer">
         <Link href="https://discord.gg/47yefZ5x " target="_blank">
           <Image
             fill
