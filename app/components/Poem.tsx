@@ -17,7 +17,7 @@ const Poem = () => {
   }, []);
 
   return (
-    <section className="text-[18px] lg:text-[40px] text-center text-[700] mb-[0px] lg:mb-0 mt-8 lg:mt-24 lg:leading-snug leading-tight">
+    <section className="text-[18px] lg:text-[40px] text-center text-[700] mb-[0px] lg:mb-8 mt-8  lg:leading-snug leading-tight">
       <p data-aos="fadeup" data-aos-duration="1500">La vida guió tu camino,</p>
       <p data-aos="fadeup" data-aos-duration="1500">La muerte tu destino,</p>
       <p data-aos="fadeup" data-aos-duration="1500">Solemne es nuestro rezo ante tu partida,</p>

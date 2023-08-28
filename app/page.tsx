@@ -44,7 +44,7 @@ export default function Home() {
           <>
             <Gravestone />
             <Offers />
-            <Poem />
+            {/* <Poem /> */}
             <SubmitOffer />
           </>
         )}

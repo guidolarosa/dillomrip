@@ -31,7 +31,7 @@ const SubmitOffer = (props: any) => {
   };
 
   return (
-    <div className="flex flex-col items-center mb-[42px] lg:mb-[98px] mt-0 lg:mt-10 relative h-[280px] lg:h-[380px]">
+    <div className="flex flex-col items-center mb-[42px] lg:mb-[98px] mt-0 relative h-[280px] lg:h-[420px] w-full z-10">
       <LeaveOfferButton
         onClick={() => {setStep('input')}}
         show={step === 'init'}

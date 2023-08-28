@@ -29,10 +29,10 @@ const SpiritOffer = (props: any) => {
         setTop(0);
         break;
       case 1:
-        setTop(window.innerWidth >= 768 ? -640 : -360);
+        setTop(window.innerWidth >= 768 ? -360 : -420);
         break;
       case 2:
-        setTop(window.innerWidth >= 768 ? -640 : -360);
+        setTop(window.innerWidth >= 768 ? -360 : -280);
     }
   };
 
@@ -71,7 +71,7 @@ const SpiritOffer = (props: any) => {
   return (
     <>
       <div
-        className={`spirit-offer grayscale w-[68px] aspect-square absolute transition-all left-[calc(50%-34px)] duration-[3000ms]`}
+        className={`spirit-offer grayscale w-[68px] aspect-square absolute transition-all left-[calc(50%-34px)] z-100 duration-[3000ms]`}
         style={{
           top: `${top}px`,
           filter: `${color}`,
