@@ -60,7 +60,7 @@ const Cover = ( props : any ) => {
           }`}
         >
           <div
-            className={`w-[320px] aspect-square relative cursor-pointer transition hover:scale-110 hover:rotate-3`}
+            className={`w-[320px] aspect-square relative cursor-pointer transition duration-500 hover:scale-110 hover:rotate-3`}
             onClick={() => {
               setHideCover(true);
               audioRef.current.play();
@@ -88,7 +88,7 @@ const Cover = ( props : any ) => {
                 console.log('loaded');
                 setTimeout(() => {
                   setGifLoaded(true);
-                }, 1000)
+                }, 500)
               }}
             />
           </div>
