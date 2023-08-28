@@ -12,13 +12,13 @@ const Butterflies = (props: any) => {
   return (
     <div className="w-[100vw]">
       <div
-        className="w-[32px] lg:w-[72px] aspect-square absolute left-[5%] lg:left-[20%] top-[0px] rellax"
+        className="w-[32px] lg:w-[52px] aspect-square absolute left-[5%] lg:left-[20%] top-[0px] rellax"
         data-rellax-speed="3"
       >
         <Image unoptimized fill src={files[3]} alt="Dillom" className="animate-wiggle" />
       </div>
       <div
-        className="w-[32px] lg:w-[72px] aspect-square absolute left-[10%] lg:left-[25%] top-[-32px] lg:top-[120px] rellax animate-wiggle"
+        className="w-[32px] lg:w-[52px] aspect-square absolute left-[10%] lg:left-[25%] top-[-32px] lg:top-[120px] rellax animate-wiggle"
         data-rellax-speed="5"
       >
         <Image unoptimized fill src={files[0]} alt="Dillom" className="animate-float" />

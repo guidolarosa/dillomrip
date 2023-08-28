@@ -26,10 +26,10 @@ const SpiritOffer = (props: any) => {
         setTop(0);
         break;
       case 1:
-        setTop(-640);
+        setTop(window.innerWidth >= 768 ? -640 : -360);
         break;
       case 2:
-        setTop(-640);
+        setTop(window.innerWidth >= 768 ? -640 : -360);
     }
   };
 
@@ -49,7 +49,7 @@ const SpiritOffer = (props: any) => {
   const handleColorStyle = (step: number) => {
     switch (animationStep) {
       case 0:
-        setColor(`grayscale(1)`);
+        setColor(`grayscale(100%)`);
         break;
       case 1:
         setColor(`grayscale(0)`);
@@ -87,7 +87,7 @@ const SpiritOffer = (props: any) => {
           top: `${top}px`,
           filter: `${color}`,
           transform: `${transform}`,
-          WebkitFilter: shadow,
+          WebkitFilter: color,
         }}
       >
         <Image src={props.offerImage} fill alt={"Ofrenda"} />
@@ -105,6 +105,15 @@ const SpiritOffer = (props: any) => {
         className={`spirit-offer w-[68px] aspect-square absolute transition-all left-[calc(50%-34px)] duration-[3000ms] top-0`}
       >
         <Image src={props.offerImage} fill alt={"Ofrenda"} />
+        <div
+          className={
+            "absolute w-full h-[24px] bottom-[-25px] flex justify-center"
+          }
+        >
+          <div className="whitespace-nowrap text-center text-[18px] text-gray-400 absolute group-hover:text-white filter drop-shadow-[0px_0px_8px_black]">
+            {props.offerText}
+          </div>
+        </div>
       </div>
     </>
   );

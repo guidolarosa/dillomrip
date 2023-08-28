@@ -15,7 +15,7 @@ import Poem from "./components/Poem";
 
 export default function Home() {
   const [showCover, setShowCover] = useState(true);
-  const [showPage, setShowPage] = useState(false);
+  const [showPage, setShowPage] = useState(true);
 
   useEffect(() => {
     AOS.init({
@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <>
       <main className="flex min-h-screen flex-col items-center relative z-10 lg:mb-[-120px]">
-        {showCover && <Cover setShowPage={setShowPage} />}
+        {/* {showCover && <Cover setShowPage={setShowPage} />} */}
         <Branches />
         <Butterflies />
         <Fog />

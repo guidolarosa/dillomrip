@@ -11,7 +11,10 @@ const Offers = (props: any) => {
       setOffers(
         data.map((rawData: any) => ({
           ...rawData,
-          left: getRandomArbitrary(15, 85),
+          left: getRandomArbitrary(
+            window.innerWidth >= 768 ? 15 : 5, 
+            window.innerWidth >= 768 ? 85 : 95,
+          ),
           top: getRandomArbitrary(10, 70),
         }))
       );
@@ -21,14 +24,29 @@ const Offers = (props: any) => {
   return (
     <div className="offers-container h-[220px] lg:h-[320px] w-full relative">
       {offers.map((offer: any, index: number) => (
-        <Offer
-          key={index}
-          index={index}
-          left={offer.left}
-          top={offer.top}
-          text={offer.text}
-          image={`/offers/ofrenda-${offer.imageId}.png`}
-        />
+        <>
+        {window.innerWidth >= 768 ? (
+          index < 40 && (
+            <Offer
+              key={index}
+              index={index}
+              left={offer.left}
+              top={offer.top}
+              text={offer.text}
+              image={`/offers/ofrenda-${offer.imageId}.png`}
+            />
+          )
+          ) : (
+          <Offer
+            key={index}
+            index={index}
+            left={offer.left}
+            top={offer.top}
+            text={offer.text}
+            image={`/offers/ofrenda-${offer.imageId}.png`}
+          />
+        )}
+        </>
       ))}
     </div>
   );

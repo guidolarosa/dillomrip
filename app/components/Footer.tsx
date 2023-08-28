@@ -25,7 +25,7 @@ const Footer = (props: any) => {
         <Countdown />
       </div>
       <div className="relative w-[96px] h-[60px] z-50 drop-shadow-[0px_0px_8px_transparent] hover:drop-shadow-[0px_0px_8px_white] cursor-pointer">
-        <Link href="https://discord.gg/47yefZ5x " target="_blank">
+        <Link href="https://discord.gg/ZWjqRD6x" target="_blank">
           <Image
             fill
             src="/contacto.svg"
