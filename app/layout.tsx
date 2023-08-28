@@ -6,6 +6,7 @@ import "@splidejs/react-splide/css";
 import Background from "./components/Background";
 import Header from "./components/Header";
 import Script from "next/script";
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
   title: "DILLOM.RIP ",
@@ -80,6 +81,7 @@ export default function RootLayout({
         <Background />
         <Header />
         {children}
+        <Analytics />
       </body>
     </html>
   );
