@@ -8,7 +8,49 @@ import Header from "./components/Header";
 
 export const metadata: Metadata = {
   title: "Dillom.RIP",
-  description: "Dillom.RIP",
+  description: "La vida guió tu camino, La muerte tu destino, Solemne es nuestro rezo ante tu partida, Que tu alma en paz descanse, Esta es nuestra despedida.",
+  authors: [{ name: 'Guido La Rosa', url: 'https://coyoteweb.studio' }],
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: false,
+    },
+  },
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Dillom.RIP",
+    description: "La vida guió tu camino, La muerte tu destino, Solemne es nuestro rezo ante tu partida, Que tu alma en paz descanse, Esta es nuestra despedida.",
+    creator: '@dillom',
+    images: ['https://www.dillom.rip/wp-content/uploads/2023/08/share.jpg'],
+  },
+  openGraph: {
+    title: "Dillom.RIP",
+    url: 'https://dillom.rip',
+    type: 'website',
+    description: 'La vida guió tu camino, La muerte tu destino, Solemne es nuestro rezo ante tu partida, Que tu alma en paz descanse, Esta es nuestra despedida.',
+    images: [
+      {
+        url: 'https://www.dillom.rip/wp-content/uploads/2023/08/share.jpg',
+        width: 800,
+        height: 600,
+      },
+      {
+        url: 'https://www.dillom.rip/wp-content/uploads/2023/08/share.jpg',
+        width: 1800,
+        height: 1600,
+        alt: 'My custom alt',
+      },
+    ],
+  }
+
 };
 
 export default function RootLayout({
