@@ -8,9 +8,9 @@ import BottomCandles from "./BottomCandles";
 const Book = (props: any) => {
   return (
     <div
-      className="book h-[480px] w-[100%] md:w-[795px] md:h-[590px]"
+      className="book h-[480px] w-[100%] md:w-[920px] md:h-[720px]"
     >
-      <div className="w-full h-full absolute bottom-32 md:bottom-[100px] left-[0] scale-[0.9]">
+      <div className="w-full h-full absolute bottom-32 md:bottom-[180px] left-[0] scale-[0.9]">
         <div className="candle-groups bottom-0 absolute left-[25%]">
           <LeftCandlesGroup />
           <LeftCandles />
@@ -19,7 +19,7 @@ const Book = (props: any) => {
           <RightCandlesGroup />
           <RightCandles />
         </div>
-        <BottomCandles />
+        {/* <BottomCandles /> */}
       </div>
       <div className="w-full h-full relative top-[-80px] md:top-[-120px]">
         <Image
