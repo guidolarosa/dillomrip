@@ -49,6 +49,10 @@ const Countdown = () => {
     >
       <div className="text-[48px] md:text-[111px] flex mt-auto">
         <span className="flex w-[64px] md:w-[128px] justify-center">
+          {remainingTime.days}
+        </span>
+        :
+        <span className="flex w-[64px] md:w-[128px] justify-center">
           {remainingTime.hours}
         </span>
         :
