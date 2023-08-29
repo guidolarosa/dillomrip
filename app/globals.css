@@ -112,5 +112,11 @@ body {
 .splide__slide .offer-image {
   transition: 0.25s ease-in-out all;
 } */
-
+/* 
+.outlined {
+  color: transparent;
+  -webkit-text-fill-color: transparent; 
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+} */
 

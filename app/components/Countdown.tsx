@@ -47,21 +47,33 @@ const Countdown = () => {
       data-aos="fade-up"
       data-aos-offset="0"
     >
-      <div className="text-[48px] md:text-[111px] flex mt-auto">
-        <span className="flex w-[64px] md:w-[128px] justify-center">
-          {remainingTime.days}
+      <div className="text-[32px] md:text-[111px] flex mt-auto">
+        <span className="flex w-[66px] md:w-[218px] justify-center">
+          <div>
+            {remainingTime.days}
+            <span className="outlined">D</span>
+          </div>
         </span>
         :
-        <span className="flex w-[64px] md:w-[128px] justify-center">
-          {remainingTime.hours}
+        <span className="flex w-[66px] md:w-[218px] justify-center">
+          <div>
+            {remainingTime.hours}
+            <span className="outlined">H</span>
+          </div>
         </span>
         :
-        <span className="flex w-[64px] md:w-[128px] justify-center">
-          {remainingTime.minutes}
+        <span className="flex w-[66px] md:w-[218px] justify-center">
+          <div>
+            {remainingTime.minutes}
+            <span className="outlined">M</span>
+          </div>
         </span>
         :
-        <span className="flex w-[64px] md:w-[128px] justify-center">
-          {remainingTime.seconds}
+        <span className="flex w-[66px] md:w-[218px] justify-center">
+          <div>
+            {remainingTime.seconds}
+            <span className="outlined">S</span>
+          </div>
         </span>
       </div>
     </div>
