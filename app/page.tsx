@@ -10,6 +10,7 @@ import Fire from "./components/Fire";
 import Book from "./components/Book";
 import Image from "next/image";
 import Butterflies from "./components/Butterflies";
+import Link from "next/link";
 
 export default function Home() {
   const [showCover, setShowCover] = useState(true);
@@ -40,19 +41,21 @@ export default function Home() {
               <Butterflies />
             </div>
             <Book />
-            <div
-              className={`w-[180px] h-[62px] md:w-[331px] md:h-[80px] relative transition duration-500 drop-shadow-[0px_0px_8px_transparent] hover:drop-shadow-[0px_0px_8px_white] cursor-pointer top-[-0px]`}
-              data-aos="fade-up"
-              data-aos-duration="2000"
-              data-aos-offset="-2000"
-            >
-              <Image
-                fill
-                src="/subasta.svg"
-                alt="Grave"
-                className="object-contain"
-              />
-            </div>
+            <Link href="http://marketplace.dillom.rip/" target="_blank">
+              <div
+                className={`w-[180px] h-[62px] md:w-[331px] md:h-[80px] relative transition duration-500 drop-shadow-[0px_0px_8px_transparent] hover:drop-shadow-[0px_0px_8px_white] cursor-pointer top-[-60px] md:top-[-0px]`}
+                data-aos="fade-up"
+                data-aos-duration="2000"
+                data-aos-offset="-2000"
+              >
+                <Image
+                  fill
+                  src="/subasta.svg"
+                  alt="Grave"
+                  className="object-contain"
+                />
+              </div>
+            </Link>
           </div>
         )}
       </main>
