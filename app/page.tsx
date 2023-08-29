@@ -5,14 +5,11 @@ import AOS from "aos";
 import Rellax from "rellax";
 import Cover from "./components/Cover";
 import Fog from "./components/Fog";
-import Offers from "./components/Offers";
-import Branches from "./components/Branches";
-import Gravestone from "./components/Gravestone";
 import Footer from "./components/Footer";
+import Fire from "./components/Fire";
+import Book from "./components/Book";
+import Image from "next/image";
 import Butterflies from "./components/Butterflies";
-import SubmitOffer from "./components/SubmitOffer";
-import Poem from "./components/Poem";
-import { clearOffers, findDuplicates } from "@/utils/sanity";
 
 export default function Home() {
   const [showCover, setShowCover] = useState(true);
@@ -29,25 +26,34 @@ export default function Home() {
       center: false,
       vertical: true,
     });
-
-    // clearOffers();
-    // findDuplicates()
   }, []);
 
   return (
     <>
-      <main className="flex min-h-screen flex-col items-center relative z-10 md:mb-[-120px]">
+      <main className="flex flex-col items-center relative z-10 w-full">
         {showCover && <Cover setShowPage={setShowPage} />}
-        <Branches />
-        <Butterflies />
-        <Fog />
+        {/* <Fog /> */}
+        <Fire />
         {showPage && (
-          <>
-            <Gravestone />
-            <Offers />
-            <Poem />
-            <SubmitOffer />
-          </>
+          <div className="flex flex-col items-center w-full">
+            <div className="absolute">
+              <Butterflies />
+            </div>
+            <Book />
+            <div
+              className={`w-[180px] h-[62px] md:w-[331px] md:h-[80px] relative transition duration-500 drop-shadow-[0px_0px_8px_transparent] hover:drop-shadow-[0px_0px_8px_white] cursor-pointer top-[-0px]`}
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              data-aos-offset="-2000"
+            >
+              <Image
+                fill
+                src="/subasta.svg"
+                alt="Grave"
+                className="object-contain"
+              />
+            </div>
+          </div>
         )}
       </main>
       <Footer />
