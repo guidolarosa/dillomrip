@@ -12,7 +12,7 @@ const Countdown = () => {
   useEffect(() => {
     const countdownTimer = setInterval(() => {
       const now = moment(new Date());
-      const expiration = moment("2023-08-29T22:00:00-0000");
+      const expiration = moment("2023-09-1T22:00:00-0000");
 
       const diff = expiration.diff(now);
       const diffDuration = moment.duration(diff);
