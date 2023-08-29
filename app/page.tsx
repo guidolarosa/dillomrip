@@ -59,7 +59,7 @@ export default function Home() {
           </div>
         )}
       </main>
-      <div className="mt-[-190px]">
+      <div className="md:mt-[-190px]">
         <Footer />
       </div>
     </>
