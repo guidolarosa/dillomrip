@@ -28,7 +28,7 @@ export async function createOffer(offer : any) {
 
 export async function clearOffers() {
   try {
-    const result = await client.delete({query: '*[_type == "offer"][0...999]'});
+    const result = await client.delete({query: '*[_type == "offer"][0...1000]'});
     console.log(result)
   } catch (err) {
     console.log(err)

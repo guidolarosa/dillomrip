@@ -22,7 +22,7 @@ const Offers = (props: any) => {
   }, []);
 
   return (
-    <div className="offers-container h-[220px] lg:h-[320px] w-full relative">
+    <div className="offers-container h-[220px] md:h-[320px] w-full relative">
       {offers.map((offer: any, index: number) => (
         <>
           {window.innerWidth <= 768 ? (

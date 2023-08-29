@@ -69,7 +69,7 @@ export default function RootLayout({
       </Script>
       {/* End Google Tag Manager */}
 
-      <body className={`relative`}>
+      <body className={`relative min-h-[100dvh] flex flex-col`}>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-532F9R96"

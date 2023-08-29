@@ -4,8 +4,8 @@ import Countdown from "./Countdown";
 
 const Footer = (props: any) => {
   return (
-    <footer className="flex justify-center bg-[url('/fire-footer.png')] w-full h-[280px] lg:h-[700px] lg:pb-[32px] overflow-hidden relative flex-col items-center z-0">
-      <div className="absolute w-full h-full z-10 bottom-10 lg:bottom-0">
+    <footer className="flex justify-center bg-[url('/fire-footer.png')] w-full h-[280px] md:h-[700px] pb-4 md:pb-[32px] overflow-hidden relative flex-col items-center z-0 mt-auto">
+      <div className="absolute w-full h-full z-10 bottom-10 md:bottom-0">
         <Image
           fill
           src="/fire-footer.png"
@@ -13,7 +13,7 @@ const Footer = (props: any) => {
           className="object-top object-cover"
         />
       </div>
-      <div className="bottom-10 lg:bottom-0 absolute w-full h-full">
+      <div className="bottom-0 md:bottom-0 absolute w-full h-full">
         <Image
           fill
           src="/branch-footer.png"

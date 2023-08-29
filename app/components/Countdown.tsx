@@ -47,16 +47,16 @@ const Countdown = () => {
       data-aos="fade-up"
       data-aos-offset="0"
     >
-      <div className="text-[48px] lg:text-[111px] flex mt-auto">
-        <span className="flex w-[64px] lg:w-[128px] justify-center">
+      <div className="text-[48px] md:text-[111px] flex mt-auto">
+        <span className="flex w-[64px] md:w-[128px] justify-center">
           {remainingTime.hours}
         </span>
         :
-        <span className="flex w-[64px] lg:w-[128px] justify-center">
+        <span className="flex w-[64px] md:w-[128px] justify-center">
           {remainingTime.minutes}
         </span>
         :
-        <span className="flex w-[64px] lg:w-[128px] justify-center">
+        <span className="flex w-[64px] md:w-[128px] justify-center">
           {remainingTime.seconds}
         </span>
       </div>

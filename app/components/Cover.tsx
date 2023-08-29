@@ -26,7 +26,7 @@ const Cover = ( props : any ) => {
 
   return (
     <>
-      <div className="fixed right-4 top-4 lg:right-10 lg:top-10">
+      <div className="fixed right-4 top-4 md:right-10 md:top-10">
         {soundOn ? (
           <BsFillVolumeUpFill
             className="cursor-pointer"

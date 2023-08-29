@@ -36,7 +36,7 @@ export default function Home() {
 
   return (
     <>
-      <main className="flex min-h-screen flex-col items-center relative z-10 lg:mb-[-120px]">
+      <main className="flex min-h-screen flex-col items-center relative z-10 md:mb-[-120px]">
         {showCover && <Cover setShowPage={setShowPage} />}
         <Branches />
         <Butterflies />

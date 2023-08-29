@@ -18,7 +18,7 @@ const Share = (props: any) => {
       <div className="w-[320px] aspect-square relative top-4 flex flex-col justify-center items-center">
         <Link href="https://twitter.com/intent/tweet?&url=https%3A%2F%2Fwww.dillom.rip%2F&text=Que%20tu%20alma%20en%20paz%20descanse,%20esta%20es%20nuestra%20despedida" target="_blank">
           <div
-            className={`w-[180px] h-[62px] lg:w-[331px] lg:h-[80px] relative transition duration-500 drop-shadow-[0px_0px_8px_transparent]  hover:drop-shadow-[0_0_8px_white]`}
+            className={`w-[180px] h-[62px] md:w-[331px] md:h-[80px] relative transition duration-500 drop-shadow-[0px_0px_8px_transparent]  hover:drop-shadow-[0_0_8px_white]`}
           >
             <Image
               fill

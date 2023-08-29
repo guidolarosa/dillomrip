@@ -3,28 +3,40 @@ import LeftCandles from "./LeftCandles";
 import RightCandles from "./RightCandles";
 import LeftCandlesGroup from "./LeftCandlesGroup";
 import RightCandlesGroup from "./RightCandlesGroup";
+import BottomCandles from "./BottomCandles";
 
 const Book = (props: any) => {
   return (
-    <div className="book aspect-square h-[480px] md:h-[980px] relative top-[-100px] md:top-[-220px]" style={{animationDuration: '30s'}}>
-      <div className="w-full h-full absolute bottom-32">
-        <LeftCandlesGroup />
-        <RightCandlesGroup />
-        <LeftCandles />
-        <RightCandles />
+    <div
+      className="book h-[480px] w-[100%] md:w-[795px] md:h-[590px]"
+    >
+      <div className="w-full h-full absolute bottom-32 md:bottom-[100px] left-[0] scale-[0.9]">
+        <div className="candle-groups bottom-0 absolute left-[25%]">
+          <LeftCandlesGroup />
+          <LeftCandles />
+        </div>
+        <div className="candle-groups bottom-0 absolute right-[25%]">
+          <RightCandlesGroup />
+          <RightCandles />
+        </div>
+        <BottomCandles />
       </div>
-      <Image
-        fill
-        src="/book.png"
-        alt="Grave"
-        className={`object-contain hidden md:block animate-bookFloat`}
-      />
-      <Image
-        fill
-        src="/mobile-book.png"
-        alt="Grave"
-        className={`object-contain md:hidden animate-bookFloat`}
-      />
+      <div className="w-full h-full relative top-[-80px] md:top-[-120px]">
+        <Image
+          fill
+          src="/book.png"
+          alt="Grave"
+          style={{ animationDuration: "30s" }}
+          className={`object-contain hidden md:block animate-bookFloat absolute w-full h-full object-center`}
+        />
+        <Image
+          fill
+          src="/mobile-book.png"
+          alt="Grave"
+          style={{ animationDuration: "30s" }}
+          className={`object-contain md:hidden animate-bookFloat absolute w-full h-full`}
+        />
+      </div>
     </div>
   );
 };

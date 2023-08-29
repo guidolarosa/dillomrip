@@ -9,6 +9,7 @@ import Footer from "./../components/Footer";
 import Fire from "../components/Fire";
 import Book from "../components/Book";
 import Image from "next/image";
+import Butterflies from "../components/Butterflies";
 
 export default function Home() {
   const [showCover, setShowCover] = useState(true);
@@ -29,17 +30,21 @@ export default function Home() {
 
   return (
     <>
-      <main className="flex flex-col items-center relative z-10">
+      <main className="flex flex-col items-center relative z-10 w-full">
         {showCover && <Cover setShowPage={setShowPage} />}
-        <Fog />
+        {/* <Fog /> */}
         <Fire />
         {showPage && (
-          <>
+          <div className="flex flex-col items-center w-full">
+            <div className="absolute">
+              <Butterflies />
+            </div>
             <Book />
             <div
-              className={`w-[331px] h-[80px] relative transition duration-500 drop-shadow-[0px_0px_8px_transparent] hover:drop-shadow-[0px_0px_8px_white] cursor-pointer top-[-120px] md:top-[-280px]`}
+              className={`w-[180px] h-[62px] md:w-[331px] md:h-[80px] relative transition duration-500 drop-shadow-[0px_0px_8px_transparent] hover:drop-shadow-[0px_0px_8px_white] cursor-pointer top-[-0px]`}
               data-aos="fade-up"
               data-aos-duration="2000"
+              data-aos-offset="-2000"
             >
               <Image
                 fill
@@ -48,7 +53,7 @@ export default function Home() {
                 className="object-contain"
               />
             </div>
-          </>
+          </div>
         )}
       </main>
       <Footer />
