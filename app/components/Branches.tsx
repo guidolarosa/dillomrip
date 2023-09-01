@@ -21,7 +21,7 @@ const Branches = (props: any) => {
   return (
     <>
       <div
-        className="hidden lg:block w-[540px] lg:w-[800px] aspect-square fixed left-[-280px] lg:left-[-240px] top-[20px] z-20 pointer-events-none rellax"
+        className="hidden md:block w-[540px] md:w-[800px] aspect-square fixed left-[-280px] md:left-[-240px] top-[20px] z-20 pointer-events-none rellax"
         data-rellax-speed="15"
       >
         <Image
@@ -32,7 +32,7 @@ const Branches = (props: any) => {
         />
       </div>
       <div
-        className="hidden lg:block w-[1000px] aspect-square fixed right-[-280px] lg:right-0 top-[160px] z-20 pointer-events-none rellax"
+        className="hidden md:block w-[1000px] aspect-square fixed right-[-280px] md:right-0 top-[160px] z-20 pointer-events-none rellax"
         data-rellax-speed="18"
       >
         <Image
@@ -43,7 +43,7 @@ const Branches = (props: any) => {
         />
       </div>
       <div
-        className="hidden lg:block w-[1200px] aspect-square fixed right-[-280px] lg:left-[-620px] top-[-380px] z-20 pointer-events-none rellax blur"
+        className="hidden md:block w-[1200px] aspect-square fixed right-[-280px] md:left-[-620px] top-[-380px] z-20 pointer-events-none rellax blur"
         data-rellax-speed="40"
         // style={{ transform: `translateY(${-scrollPosition * 1.2}px)` }}
       >

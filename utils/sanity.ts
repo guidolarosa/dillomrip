@@ -13,7 +13,7 @@ export const client = createClient({
 
 // uses GROQ to query content: https://www.sanity.io/docs/groq
 export async function getOffers(quantity : number) {
-  const offers = await client.fetch(`*[_type == "offer"][0...${quantity}]`)
+  const offers = await client.fetch(`*[_type == "offer"] | order(_createdAt desc)[0...${quantity}]`)
   return offers
 }
 
@@ -28,7 +28,18 @@ export async function createOffer(offer : any) {
 
 export async function clearOffers() {
   try {
-    const result = await client.delete({query: '*[_type == "offer"][0...999]'});
+    const result = await client.delete({query: '*[_type == "offer"][0...1000]'});
+    console.log(result)
+  } catch (err) {
+    console.log(err)
+  }
+}
+
+export async function findDuplicates() {
+  try {
+    const result = await client.fetch(`[_type == "offer"] {
+      "duplicates": *[_type == "offer" && @[text] == ^[text] && _id != ^._id && !(_id in path('drafts.**'))] {_id, text: @[text]}
+    }[count(duplicates) > 0]]`);
     console.log(result)
   } catch (err) {
     console.log(err)

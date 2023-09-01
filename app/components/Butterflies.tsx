@@ -12,25 +12,25 @@ const Butterflies = (props: any) => {
   return (
     <div className="w-[100vw]">
       <div
-        className="w-[32px] lg:w-[52px] aspect-square absolute left-[5%] lg:left-[20%] top-[0px] rellax"
+        className="w-[32px] md:w-[52px] aspect-square absolute left-[5%] md:left-[20%] top-[0px] rellax"
         data-rellax-speed="3"
       >
         <Image unoptimized fill src={files[3]} alt="Dillom" className="animate-wiggle" />
       </div>
       <div
-        className="w-[32px] lg:w-[52px] aspect-square absolute left-[10%] lg:left-[25%] top-[-32px] lg:top-[120px] rellax animate-wiggle"
+        className="w-[32px] md:w-[52px] aspect-square absolute left-[10%] md:left-[25%] top-[-32px] md:top-[120px] rellax animate-wiggle"
         data-rellax-speed="5"
       >
         <Image unoptimized fill src={files[0]} alt="Dillom" className="animate-float" />
       </div>
       <div
-        className="w-[32px] lg:w-[72px] aspect-square absolute right-[12%] top-[820px] rellax animate-wiggle"
+        className="w-[32px] md:w-[72px] aspect-square absolute right-[12%] top-[820px] rellax animate-wiggle"
         data-rellax-speed="3"
       >
         <Image unoptimized fill src={files[1]} alt="Dillom" className="animate-float" />
       </div>
       <div
-        className="w-[32px] lg:w-[72px] aspect-square absolute right-[18%] top-[870px] rellax animate-wiggle"
+        className="w-[32px] md:w-[72px] aspect-square absolute right-[18%] top-[870px] rellax animate-wiggle"
         data-rellax-speed="2"
       >
         <Image unoptimized fill src={files[2]} alt="Dillom" className="animate-float" />

@@ -33,7 +33,6 @@ export default function Home() {
     <>
       <main className="flex min-h-screen flex-col items-center relative z-10 md:mb-[-120px]">
         {showCover && <Cover setShowPage={setShowPage} audioFile={"/audio-final.mp3"} />}
-        <Fire />
         <Butterflies />
         <Fog />
         {showPage && (

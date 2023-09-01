@@ -12,7 +12,7 @@ const Countdown = () => {
   useEffect(() => {
     const countdownTimer = setInterval(() => {
       const now = moment(new Date());
-      const expiration = moment("2023-08-29T22:00:00-0000");
+      const expiration = moment("2023-09-01T22:00:00-0000");
 
       const diff = expiration.diff(now);
       const diffDuration = moment.duration(diff);
@@ -48,17 +48,33 @@ const Countdown = () => {
       data-aos="fade-up"
       data-aos-offset="0"
     >
-      <div className="text-[48px] lg:text-[111px] flex mt-auto">
-        <span className="flex w-[64px] lg:w-[128px] justify-center">
-          {remainingTime.hours}
+      <div className="text-[32px] md:text-[111px] flex mt-auto">
+        <span className="flex w-[66px] md:w-[218px] justify-center">
+          <div>
+            {remainingTime.days}
+            <span className="outlined">D</span>
+          </div>
         </span>
         :
-        <span className="flex w-[64px] lg:w-[128px] justify-center">
-          {remainingTime.minutes}
+        <span className="flex w-[66px] md:w-[218px] justify-center">
+          <div>
+            {remainingTime.hours}
+            <span className="outlined">H</span>
+          </div>
         </span>
         :
-        <span className="flex w-[64px] lg:w-[128px] justify-center">
-          {remainingTime.seconds}
+        <span className="flex w-[66px] md:w-[218px] justify-center">
+          <div>
+            {remainingTime.minutes}
+            <span className="outlined">M</span>
+          </div>
+        </span>
+        :
+        <span className="flex w-[66px] md:w-[218px] justify-center">
+          <div>
+            {remainingTime.seconds}
+            <span className="outlined">S</span>
+          </div>
         </span>
       </div>
     </div>

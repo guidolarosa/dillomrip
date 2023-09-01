@@ -46,10 +46,10 @@ const config: Config = {
         },
         bookFloat: {
           "0%, 100%": {
-            transform: "translateY(-24px)",
+            transform: "translateY(-12px)",
           },
           "50%": {
-            transform: "translateY(24px)",
+            transform: "translateY(12px)",
           },
         },
         float: {

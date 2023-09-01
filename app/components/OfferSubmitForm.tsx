@@ -6,11 +6,15 @@ import { offerImages } from "../../content/offerImages";
 const OfferSubmitForm = (props: any) => {
   const splideRef: any = useRef(null);
 
+  const [sendOfferClicked, setSendOfferClicked] = useState(false);
   const [offerValid, setOfferValid] = useState(false);
 
   const onOfferUpdate = (e: any) => {
-    props.setOfferText(e.target.value);
-    if (e.target.value.length > 0 && e.target.value.length < 35) {
+    if (e.target.value.length < 35) {
+      props.setOfferText(e.target.value);
+    }
+
+    if (e.target.value.length > 0) {
       setOfferValid(true);
     } else {
       setOfferValid(false);
@@ -26,8 +30,10 @@ const OfferSubmitForm = (props: any) => {
       }`}
     >
       <div className="w-[320px] aspect-square mt-[42px] flex flex-col relative top-4 items-center">
-        <div className="absolute w-full h-full flex justify-center top-[-16px] lg:top-[-58px] pointer-events-none z-30">
-          <div className={`w-[68px] h-[101px] lg:scale-[0.9] lg:w-[116px] lg:h-[174px] relative transition-all`}>
+        <div className="absolute w-full h-full flex justify-center top-[-16px] md:top-[-58px] pointer-events-none z-30">
+          <div
+            className={`w-[68px] h-[101px] md:scale-[0.9] md:w-[116px] md:h-[174px] relative transition-all`}
+          >
             <Image src={"/fire-selector.png"} fill alt={"Ofrenda"} />
           </div>
         </div>
@@ -43,7 +49,7 @@ const OfferSubmitForm = (props: any) => {
             {offerImages.map((offer, index) => (
               <SplideSlide key={index}>
                 <div className="w-full flex items-center justify-center h-[60px]">
-                  <div className="offer-image top-[12px] lg:top-0 w-[40px] lg:w-[68px] aspect-square relative">
+                  <div className="offer-image top-[12px] md:top-0 w-[40px] md:w-[68px] aspect-square relative">
                     <Image src={offer} fill alt={"Ofrenda"} />
                   </div>
                 </div>
@@ -58,10 +64,15 @@ const OfferSubmitForm = (props: any) => {
           onChange={onOfferUpdate}
         />
         <div
-          className={`w-[180px] h-[62px] lg:w-[331px] lg:h-[80px] relative transition duration-500 drop-shadow-[0px_0px_8px_transparent] hover:drop-shadow-[0px_0px_8px_white] cursor-pointer ${
+          className={`w-[180px] h-[62px] md:w-[331px] md:h-[80px] relative transition duration-500 drop-shadow-[0px_0px_8px_transparent] hover:drop-shadow-[0px_0px_8px_white] cursor-pointer ${
             offerValid ? "opacity-100" : "opacity-50 pointer-events-none"
+          } ${
+            sendOfferClicked ? "opacity-50 pointer-events-none" : "opacity-100"
           }`}
-          onClick={props.submitOffer}
+          onClick={() => {
+            setSendOfferClicked(true);
+            props.submitOffer();
+          }}
         >
           <Image
             fill
