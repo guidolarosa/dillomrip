@@ -29,7 +29,7 @@ const Gravestone = (props: any) => {
       <div className="gravestone w-[380px] h-[387px] md:w-[456px] md:h-[460px] relative">
         <Image
           fill
-          src="/gravestone.png"
+          src={`${props.vandalized ? "/gravestone/vandalized.png" : "/gravestone/normal.png"}`}
           alt="Grave"
           className={`object-contain`}
         />

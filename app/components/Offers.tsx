@@ -5,30 +5,32 @@ import { getRandomArbitrary } from "@/utils/utils";
 
 const Offers = (props: any) => {
   const [offers, setOffers] = useState([]);
-
   useEffect(() => {
-    getOffers(60).then((data) => {
+    console.log(props.offersQuantity)
+    getOffers(props.offersQuantity).then((data) => {
+      console.log(data);
       setOffers(
         data.map((rawData: any) => ({
           ...rawData,
           left: getRandomArbitrary(
-            window.innerWidth >= 768 ? 15 : 5,
-            window.innerWidth >= 768 ? 85 : 95
+            window.innerWidth >= 768 ? 10 : 5,
+            window.innerWidth >= 768 ? 90 : 95
           ),
-          top: getRandomArbitrary(10, 70),
+          top: getRandomArbitrary(0, 100),
         }))
       );
     });
   }, []);
 
   return (
-    <div className="offers-container h-[220px] lg:h-[320px] w-full relative">
+    <div className={`offers-container  w-full relative ${props.large ? 'h-[3000px] md:h-[3000px]' : 'h-[220px] md:h-[320px]'}`}>
       {offers.map((offer: any, index: number) => (
         <>
-          {window.innerWidth >= 768 ? (
+          {window.innerWidth <= 768 && !props.large ? (
             index < 40 && (
               <Offer
                 key={index}
+                staggered={false}
                 index={index}
                 left={offer.left}
                 top={offer.top}
@@ -39,6 +41,7 @@ const Offers = (props: any) => {
           ) : (
             <Offer
               key={index}
+              staggered={false}
               index={index}
               left={offer.left}
               top={offer.top}

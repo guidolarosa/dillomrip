@@ -1,11 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import Countdown from "./Countdown";
+import ReleaseDate from "./ReleaseDate";
 
 const Footer = (props: any) => {
   return (
-    <footer className="flex justify-center bg-[url('/fire-footer.png')] w-full h-[280px] lg:h-[700px] lg:pb-[32px] overflow-hidden relative flex-col items-center z-0">
-      <div className="absolute w-full h-full z-10 bottom-10 lg:bottom-0">
+  <>
+    <footer className="flex justify-center bg-[url('/fire-footer.png')] w-full h-[280px] md:h-[700px] pb-4 md:pb-[32px] overflow-hidden relative flex-col items-center mt-auto z-20">
+      <div className="absolute w-full h-full z-10 bottom-10 md:bottom-0">
         <Image
           fill
           src="/fire-footer.png"
@@ -22,7 +24,11 @@ const Footer = (props: any) => {
         />
       </div>
       <div className="relative flex flex-col z-50 mt-auto">
-        <Countdown />
+        {props.countdown ? (
+          <Countdown />
+        ) : (
+          <ReleaseDate />
+        )}
       </div>
       <div className="relative w-[96px] h-[60px] z-50 drop-shadow-[0px_0px_8px_transparent] hover:drop-shadow-[0px_0px_8px_white] cursor-pointer">
         <Link href="https://discord.gg/ZWjqRD6x" target="_blank">
@@ -35,7 +41,13 @@ const Footer = (props: any) => {
         </Link>
       </div>
     </footer>
+    <div className="gradient fixed bottom-0 bg-gradient-footer-mask h-40 w-[100vw] z-10" />
+  </>
   );
 };
+
+Footer.defaultProps = {
+  countdown: true
+}
 
 export default Footer;

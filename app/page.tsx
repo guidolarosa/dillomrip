@@ -10,9 +10,7 @@ import Branches from "./components/Branches";
 import Gravestone from "./components/Gravestone";
 import Footer from "./components/Footer";
 import Butterflies from "./components/Butterflies";
-import SubmitOffer from "./components/SubmitOffer";
-import Poem from "./components/Poem";
-import { clearOffers } from "@/utils/sanity";
+import Fire from "./components/Fire";
 
 export default function Home() {
   const [showCover, setShowCover] = useState(true);
@@ -29,27 +27,26 @@ export default function Home() {
       center: false,
       vertical: true,
     });
-
-    // clearOffers();
   }, []);
 
   return (
     <>
-      <main className="flex min-h-screen flex-col items-center relative z-10 lg:mb-[-120px]">
-        {showCover && <Cover setShowPage={setShowPage} />}
+      <main className="flex min-h-screen flex-col items-center relative z-10 md:mb-[-120px]">
+        {showCover && <Cover setShowPage={setShowPage} audioFile={"/audio-final.mp3"} />}
+        <Fire />
         <Branches />
         <Butterflies />
         <Fog />
         {showPage && (
           <>
-            <Gravestone />
-            <Offers />
-            {/* <Poem /> */}
-            <SubmitOffer />
+            <Gravestone vandalized />
+            <Offers large offersQuantity={500}/>
           </>
         )}
       </main>
-      <Footer />
+      <Footer 
+        countdown={false}
+      />
     </>
   );
 }
