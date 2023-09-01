@@ -102,7 +102,7 @@ const config: Config = {
         fade: "fade 0.25s ease-out forwards",
         fadeup: "fadeup 0.25s ease-out forwards",
         wiggle: "wiggle 5s ease-in-out infinite",
-        offerfadeup: "offerfadeup 1s ease-out infinite",
+        offerfadeup: "offerfadeup 3s ease-out  5s forwards",
         bookFloat: "bookFloat 30s ease-in-out infinite"
       },
       backgroundImage: {

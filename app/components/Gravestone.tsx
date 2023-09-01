@@ -5,7 +5,7 @@ import LeftCandles from "./LeftCandles";
 import LeftCandlesGroup from "./LeftCandlesGroup";
 import RightCandles from "./RightCandles";
 import RightCandlesGroup from "./RightCandlesGroup";
-import { ripOffers } from "@/content/ripOffers";
+import { ripOffers, ripOffersSimplified } from "@/content/ripOffers";
 
 const Gravestone = (props: any) => {
   const [gravestoneAnimated, setGravestoneAnimated] = useState(true);
@@ -37,15 +37,27 @@ const Gravestone = (props: any) => {
         <LeftCandlesGroup />
         <RightCandles />
         <RightCandlesGroup />
-        {ripOffers.map((offer: any, index: any) => (
-          <RIPOffer
-            key={index}
-            index={index}
-            position={offer.position}
-            image={offer.image}
-            name={offer.name}
-          />
-        ))}
+        {!props.simplified ? (
+          ripOffers.map((offer: any, index: any) => (
+            <RIPOffer
+              key={index}
+              index={index}
+              position={offer.position}
+              image={offer.image}
+              name={offer.name}
+            />
+          ))
+          ) : (
+          ripOffersSimplified.map((offer: any, index: any) => (
+            <RIPOffer
+              key={index}
+              index={index}
+              simplified
+              position={offer.position}
+              image={offer.image}
+            />
+          ))
+        )}
       </div>
     </div>
   );

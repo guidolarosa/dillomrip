@@ -34,17 +34,17 @@ export default function Home() {
       <main className="flex min-h-screen flex-col items-center relative z-10 md:mb-[-120px]">
         {showCover && <Cover setShowPage={setShowPage} audioFile={"/audio-final.mp3"} />}
         <Fire />
-        <Branches />
         <Butterflies />
         <Fog />
         {showPage && (
           <>
-            <Gravestone vandalized />
-            <Offers large offersQuantity={500}/>
+            <Gravestone vandalized simplified/>
+            <Offers large offersQuantity={500} staggered/>
           </>
         )}
       </main>
       <Footer 
+        small
         fixed
         countdown={false}
       />

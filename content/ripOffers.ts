@@ -84,3 +84,48 @@ export const ripOffers = [
     },
   },
 ];
+
+export const ripOffersSimplified = [
+  {
+    name: "",
+    position: {
+      desktop: {
+        bottom: -15,
+        left: 17,
+      },
+      mobile: {
+        bottom: -20,
+        left: 23,
+      },
+    },
+    image: "/rip-offers/ofrenda ripgang-4.png",
+  },
+  {
+    name: "",
+    image: "/rip-offers/ofrenda ripgang-3.png",
+    position: {
+      desktop: {
+        bottom: -12,
+        left: 36,
+      },
+      mobile: {
+        bottom: -25,
+        left: 38,
+      },
+    },
+  },
+  {
+    name: "",
+    image: "/rip-offers/ofrenda ripgang-2.png",
+    position: {
+      desktop: {
+        bottom: -10,
+        left: 68,
+      },
+      mobile: {
+        bottom: -25,
+        left: 60,
+      },
+    },
+  },
+]

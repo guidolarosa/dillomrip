@@ -4,13 +4,14 @@ import Image from "next/image";
 const Offer = (props: any) => {
   return (
     <div
-      className={`flex flex-col items-center absolute bottom animate-offerfadeup hover:z-40 opacity-0`}
+      className={`flex flex-col items-center absolute bottom hover:z-40 opacity-0 ${props.index < 20 ? 'animate-offerfadeup' : ''}`}
       style={{
         left: `${props.left}%`,
         top: `${props.top}%`,
-        animation: props.staggered ? 
-        `offerfadeup 1s ease-out ${props.index + getRandomArbitrary(-1, 1) + 10 }}s forwards` :
-        `offerfadeup 1s ease-out 10s forwards`,
+        animation: props.index < 20 && 
+          props.staggered ? 
+          `offerfadeup 2s ease-out ${props.index + getRandomArbitrary(-1, 1) + 10 }}s forwards` :
+          `offerfadeup 2s ease-out 5s forwards`
       }}
     >
       <div className={`absolute w-[36px] h-[36px] lg:w-[58px] lg:h-[58px] flex justify-center group hover:scale-125 transition`}>
