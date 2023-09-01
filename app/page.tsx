@@ -45,6 +45,7 @@ export default function Home() {
         )}
       </main>
       <Footer 
+        fixed
         countdown={false}
       />
     </>
