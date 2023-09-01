@@ -30,7 +30,7 @@ const Footer = (props: any) => {
     <>
       <footer
         className={`flex justify-center bg-[url('/fire-footer.png')] w-full ${
-          props.small ? "h-[280px] md:h-[580px]" : "h-[280px] md:h-[700px]"
+          props.small ? "h-[490px] md:h-[580px]" : "h-[280px] md:h-[700px]"
         } pb-4 md:pb-[32px] overflow-hidden  flex-col items-center mt-auto z-20 transition-all duration-[2s] ${
           props.fixed
             ? showFooter
