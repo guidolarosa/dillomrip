@@ -58,7 +58,7 @@ const Offers = (props: any) => {
   return (
     <div
       className={`offers-container w-full relative ${
-        props.large ? "h-[7000px] md:h-[5500px]" : "h-[220px] md:h-[320px]"
+        props.large ? "h-[4500px] md:h-[5500px]" : "h-[220px] md:h-[320px]"
       }`}
     >
       {offers.map((offer: any, index: number) => (
