@@ -16,41 +16,42 @@ const Offers = (props: any) => {
           window.innerWidth >= 768 ? 10 : 5,
           window.innerWidth >= 768 ? 90 : 95
         ),
-        top: getRandomArbitrary(
-          (index * 100) / props.offersQuantity,
-          (index * 100) / props.offersQuantity + 5
-        ),
+        top:
+          window.innerWidth <= 768
+            ? getRandomArbitrary(5, 95)
+            : getRandomArbitrary(
+                (index * 100) / props.offersQuantity,
+                (index * 100) / props.offersQuantity + 5
+              ),
       }));
 
-      setOffers(
-        [
-          {
-            imageId: 3,
-            text: "@fotolog.wtf",
-            top: 0.5,
-            left: 48,
-          },
-          {
-            imageId: 8,
-            text: "@1000eno",
-            top: 0,
-            left: 52,
-          },
-          {
-            imageId: 6,
-            text: "@cruzlarrosa",
-            top: 0.23,
-            left: 62,
-          },
-          {
-            imageId: 5,
-            text: "@bohemiangroovecorp",
-            top: 0.28,
-            left: 81,
-          },
-          ...fetchOffers
-        ]
-      );
+      setOffers([
+        {
+          imageId: 3,
+          text: "@fotolog.wtf",
+          top: 0.5,
+          left: 48,
+        },
+        {
+          imageId: 8,
+          text: "@1000eno",
+          top: 0,
+          left: 52,
+        },
+        {
+          imageId: 6,
+          text: "@cruzlarrosa",
+          top: 0.23,
+          left: 62,
+        },
+        {
+          imageId: 5,
+          text: "@bohemiangroovecorp",
+          top: 0.28,
+          left: 81,
+        },
+        ...fetchOffers,
+      ]);
     });
   }, []);
 
@@ -62,8 +63,8 @@ const Offers = (props: any) => {
     >
       {offers.map((offer: any, index: number) => (
         <>
-          {window.innerWidth <= 768 && !props.large ? (
-            index < 40 && (
+          {window.innerWidth <= 768 ? (
+            index < 500 && (
               <Offer
                 key={index}
                 staggered={props.staggered}
@@ -73,7 +74,7 @@ const Offers = (props: any) => {
                 text={offer.text}
                 image={
                   offer.imageId === 1
-                    ? `/offers/candles/2.gif`
+                    ? `/candles/2.gif`
                     : `/offers/ofrenda-${offer.imageId}.png`
                 }
               />
