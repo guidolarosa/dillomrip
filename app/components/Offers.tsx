@@ -17,7 +17,7 @@ const Offers = (props: any) => {
             window.innerWidth >= 768 ? 90 : 95
           ),
           top: getRandomArbitrary(
-            ((index * 100) / props.offersQuantity),
+            (index * 100) / props.offersQuantity,
             (index * 100) / props.offersQuantity + 5
           ),
         }))
@@ -42,7 +42,11 @@ const Offers = (props: any) => {
                 left={offer.left}
                 top={offer.top}
                 text={offer.text}
-                image={`/offers/ofrenda-${offer.imageId}.png`}
+                image={
+                  offer.imageId === 1
+                    ? `/offers/candles/2.gif`
+                    : `/offers/ofrenda-${offer.imageId}.png`
+                }
               />
             )
           ) : (
@@ -53,7 +57,11 @@ const Offers = (props: any) => {
               left={offer.left}
               top={offer.top}
               text={offer.text}
-              image={`/offers/ofrenda-${offer.imageId}.png`}
+              image={
+                offer.imageId === 1
+                  ? `/candles/4.gif`
+                  : `/offers/ofrenda-${offer.imageId}.png`
+              }
             />
           )}
         </>
