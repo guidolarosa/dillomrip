@@ -31,7 +31,7 @@ const Footer = (props: any) => {
       <footer
         className={`flex justify-center bg-[url('/fire-footer.png')] w-full ${
           props.small ? "h-[490px] md:h-[680px]" : "h-[280px] md:h-[700px]"
-        } pb-4 md:pb-[32px] overflow-hidden  flex-col items-center mt-auto z-20 transition-all duration-[2s] ${
+        } pb-4 md:pb-[32px]  flex-col items-center mt-auto z-20 transition-all duration-[2s] ${
           props.fixed
             ? showFooter
               ? "fixed bottom-0"
@@ -40,7 +40,7 @@ const Footer = (props: any) => {
         }`}
       >
         <div
-          className={`absolute w-full h-full z-10 ${
+          className={`absolute w-full h-full z-30 ${
             props.small ? "translate-y-[7rem]" : "translate-y-[0rem]"
           } ${props.fixed ? "bottom-0" : "bottom-10 md:bottom-0"}`}
         >
@@ -52,7 +52,7 @@ const Footer = (props: any) => {
           />
         </div>
         <div
-          className={`bottom-10 lg:bottom-0 absolute w-full h-full ${
+          className={`bottom-10 lg:bottom-0 absolute w-full h-full z-20 ${
             props.small ? "translate-y-[12rem]" : "translate-y-[0rem]"
           } ${
             props.fixed ? "bottom-0" : "bottom-10 md:bottom-0"
@@ -65,6 +65,9 @@ const Footer = (props: any) => {
             className="object-top object-cover"
           />
         </div>
+        <div
+          className={`bottom-[380px] absolute w-full h-full bg-gradient-footer-mask`}
+        / >
         <div className="relative flex flex-col z-50 mt-auto">
           {props.countdown ? (
             <Countdown />

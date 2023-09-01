@@ -27,13 +27,13 @@ const Offers = (props: any) => {
           {
             imageId: 3,
             text: "@fotolog.wtf",
-            top: 0.7,
+            top: 0.5,
             left: 48,
           },
           {
             imageId: 8,
             text: "@1000eno",
-            top: 0.25,
+            top: 0,
             left: 52,
           },
           {
