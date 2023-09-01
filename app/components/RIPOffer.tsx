@@ -16,7 +16,7 @@ const RIPOffer = (props: any) => {
             : `${props.position.mobile.left}%`,
       }}
     >
-      <div className={`relative aspect-square w-[80px] lg:w-[120px]`}>
+      <div className={`relative aspect-square w-[80px] lg:w-[80px]`}>
         <Image src={props.image} fill alt={props.name} />
       </div>
       <div className="whitespace-nowrap text-center text-[18px] lg:text-[22px]">

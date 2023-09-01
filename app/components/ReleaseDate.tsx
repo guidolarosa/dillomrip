@@ -19,7 +19,7 @@ const ReleaseDate = (props: any) => {
         >
           <div>04</div>
         </span>
-        :
+        .
         <span
           className={`${
             props.small ? "w-[48px] md:w-[66px]" : "w-[48px] md:w-[140px]"
@@ -27,7 +27,7 @@ const ReleaseDate = (props: any) => {
         >
           <div>09</div>
         </span>
-        :
+        .
         <span
           className={`${
             props.small ? "w-[48px] md:w-[66px]" : "w-[48px] md:w-[140px]"

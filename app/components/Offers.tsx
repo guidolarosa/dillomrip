@@ -27,14 +27,14 @@ const Offers = (props: any) => {
           {
             imageId: 3,
             text: "@fotolog.wtf",
-            top: 0.2,
-            left: 22,
+            top: 0.7,
+            left: 48,
           },
           {
             imageId: 8,
             text: "@1000eno",
             top: 0.25,
-            left: 48,
+            left: 52,
           },
           {
             imageId: 6,
@@ -56,7 +56,7 @@ const Offers = (props: any) => {
 
   return (
     <div
-      className={`offers-container  w-full relative ${
+      className={`offers-container w-full relative ${
         props.large ? "h-[7000px] md:h-[5500px]" : "h-[220px] md:h-[320px]"
       }`}
     >

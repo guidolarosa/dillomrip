@@ -105,8 +105,8 @@ export const ripOffersSimplified = [
     image: "/rip-offers/ofrenda ripgang-3.png",
     position: {
       desktop: {
-        bottom: -12,
-        left: 36,
+        bottom: -8,
+        left: 32,
       },
       mobile: {
         bottom: -25,
