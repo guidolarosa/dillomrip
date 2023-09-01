@@ -18,7 +18,7 @@ const Offers = (props: any) => {
         ),
         top:
           window.innerWidth <= 768
-            ? getRandomArbitrary(5, 95)
+            ? getRandomArbitrary(0, 100)
             : getRandomArbitrary(
                 (index * 100) / props.offersQuantity,
                 (index * 100) / props.offersQuantity + 5
