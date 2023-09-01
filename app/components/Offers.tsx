@@ -4,23 +4,52 @@ import Offer from "./Offer";
 import { getRandomArbitrary } from "@/utils/utils";
 
 const Offers = (props: any) => {
-  const [offers, setOffers] = useState([]);
+  const [offers, setOffers]: any = useState([]);
+
   useEffect(() => {
     console.log(props.offersQuantity);
     getOffers(props.offersQuantity).then((data) => {
       console.log(data);
+      const fetchOffers = data.map((rawData: any, index: number) => ({
+        ...rawData,
+        left: getRandomArbitrary(
+          window.innerWidth >= 768 ? 10 : 5,
+          window.innerWidth >= 768 ? 90 : 95
+        ),
+        top: getRandomArbitrary(
+          (index * 100) / props.offersQuantity,
+          (index * 100) / props.offersQuantity + 5
+        ),
+      }));
+
       setOffers(
-        data.map((rawData: any, index: number) => ({
-          ...rawData,
-          left: getRandomArbitrary(
-            window.innerWidth >= 768 ? 10 : 5,
-            window.innerWidth >= 768 ? 90 : 95
-          ),
-          top: getRandomArbitrary(
-            (index * 100) / props.offersQuantity,
-            (index * 100) / props.offersQuantity + 5
-          ),
-        }))
+        [
+          {
+            imageId: 3,
+            text: "@fotolog.wtf",
+            top: 0.2,
+            left: 22,
+          },
+          {
+            imageId: 8,
+            text: "@1000eno",
+            top: 0.25,
+            left: 48,
+          },
+          {
+            imageId: 6,
+            text: "@cruzlarrosa",
+            top: 0.23,
+            left: 62,
+          },
+          {
+            imageId: 5,
+            text: "@bohemiangroovecorp",
+            top: 0.28,
+            left: 81,
+          },
+          ...fetchOffers
+        ]
       );
     });
   }, []);
