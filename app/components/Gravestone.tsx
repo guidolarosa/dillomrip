@@ -29,35 +29,47 @@ const Gravestone = (props: any) => {
       <div className="gravestone w-[380px] h-[387px] md:w-[456px] md:h-[460px] relative">
         <Image
           fill
-          src={`${props.vandalized ? "/gravestone/vandalized.png" : "/gravestone/normal.png"}`}
+          src={`${
+            props.vandalized
+              ? "/gravestone/vandalized.png"
+              : "/gravestone/normal.png"
+          }`}
           alt="Grave"
           className={`object-contain`}
         />
+        {props.vandalized && (
+          <div className="gravestone w-[50px] md:w-[60px] aspect-square absolute top-[22%] left-[41%] md:top-[21%] md:left-[41%]">
+            <Image
+              fill
+              src={`/gravestone/porrito.gif`}
+              alt="Grave"
+              className={`object-contain`}
+            />
+          </div>
+        )}
         <LeftCandles />
         <LeftCandlesGroup />
         <RightCandles />
         <RightCandlesGroup />
-        {!props.simplified ? (
-          ripOffers.map((offer: any, index: any) => (
-            <RIPOffer
-              key={index}
-              index={index}
-              position={offer.position}
-              image={offer.image}
-              name={offer.name}
-            />
-          ))
-          ) : (
-          ripOffersSimplified.map((offer: any, index: any) => (
-            <RIPOffer
-              key={index}
-              index={index}
-              simplified
-              position={offer.position}
-              image={offer.image}
-            />
-          ))
-        )}
+        {!props.simplified
+          ? ripOffers.map((offer: any, index: any) => (
+              <RIPOffer
+                key={index}
+                index={index}
+                position={offer.position}
+                image={offer.image}
+                name={offer.name}
+              />
+            ))
+          : ripOffersSimplified.map((offer: any, index: any) => (
+              <RIPOffer
+                key={index}
+                index={index}
+                simplified
+                position={offer.position}
+                image={offer.image}
+              />
+            ))}
       </div>
     </div>
   );

@@ -39,13 +39,12 @@ export default function Home() {
         {showPage && (
           <>
             <Gravestone vandalized simplified/>
-            <Offers large offersQuantity={500} staggered/>
+            <Offers large offersQuantity={2000} staggered/>
           </>
         )}
       </main>
       <Footer 
         small
-        fixed
         countdown={false}
       />
     </>
