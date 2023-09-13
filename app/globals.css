@@ -99,6 +99,10 @@ body {
   transition: 0.5s ease-in-out all;
 }
 
+.dillom-box {
+  margin: 20px;
+}
+
 /* .splide__slide.is-active .offer-image {
   opacity: 1;
   transform: scale(1)
