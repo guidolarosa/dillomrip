@@ -66,7 +66,7 @@ const Footer = (props: any) => {
           />
         </div>
         <div
-          className={`bottom-[20px] md:bottom-[380px] absolute w-full h-full bg-gradient-footer-mask`}
+          className={`bottom-[20px] md:bottom-[380px] absolute w-full h-full bg-gradient-footer-mask pointer-events-none`}
         / >
         <div className="relative flex flex-col z-50 mt-auto">
           {props.countdown ? (
