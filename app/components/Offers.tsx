@@ -7,7 +7,6 @@ const Offers = (props: any) => {
   const [offers, setOffers]: any = useState([]);
 
   useEffect(() => {
-    console.log(props.offersQuantity);
     getOffers(props.offersQuantity).then((data) => {
       console.log(data);
       const fetchOffers = data.map((rawData: any, index: number) => ({
@@ -58,7 +57,7 @@ const Offers = (props: any) => {
   return (
     <div
       className={`offers-container w-full relative ${
-        props.large ? "h-[4500px] md:h-[5500px]" : "h-[220px] md:h-[320px]"
+        props.large ? "h-[4500px] md:h-[5500px]" : "h-[220px] md:h-[320px] mb-32"
       }`}
     >
       {offers.map((offer: any, index: number) => (

@@ -43,7 +43,7 @@ export default function Home() {
         {showPage && (
           <>
             <Gravestone />
-            <Offers />
+            <Offers offersQuantity={100} />
             <SubmitOffer />
           </>
         )}
